@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		04CA0B12230273BB0054C6C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B11230273BB0054C6C8 /* AppDelegate.m */; };
 		04CA0B15230273BB0054C6C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B14230273BB0054C6C8 /* ViewController.m */; };
-		04CA0B18230273BB0054C6C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CA0B16230273BB0054C6C8 /* Main.storyboard */; };
 		04CA0B1A230273BC0054C6C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CA0B19230273BC0054C6C8 /* Assets.xcassets */; };
-		04CA0B1D230273BC0054C6C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CA0B1B230273BC0054C6C8 /* LaunchScreen.storyboard */; };
 		04CA0B20230273BC0054C6C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B1F230273BC0054C6C8 /* main.m */; };
-		04CA0B2A230273BC0054C6C8 /* JiaGeLi_adminTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B29230273BC0054C6C8 /* JiaGeLi_adminTests.m */; };
-		04CA0B35230273BC0054C6C8 /* JiaGeLi_adminUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B34230273BC0054C6C8 /* JiaGeLi_adminUITests.m */; };
+		04CA0B4D23029F5E0054C6C8 /* CNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4623029F5D0054C6C8 /* CNavigationViewController.m */; };
+		04CA0B4E23029F5E0054C6C8 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4923029F5E0054C6C8 /* BaseModel.m */; };
+		04CA0B4F23029F5E0054C6C8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4A23029F5E0054C6C8 /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,17 +39,18 @@
 		04CA0B11230273BB0054C6C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04CA0B13230273BB0054C6C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		04CA0B14230273BB0054C6C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		04CA0B17230273BB0054C6C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04CA0B19230273BC0054C6C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04CA0B1C230273BC0054C6C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CA0B1E230273BC0054C6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04CA0B1F230273BC0054C6C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04CA0B25230273BC0054C6C8 /* JiaGeLi_adminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JiaGeLi_adminTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04CA0B29230273BC0054C6C8 /* JiaGeLi_adminTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiaGeLi_adminTests.m; sourceTree = "<group>"; };
-		04CA0B2B230273BC0054C6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04CA0B30230273BC0054C6C8 /* JiaGeLi_adminUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JiaGeLi_adminUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04CA0B34230273BC0054C6C8 /* JiaGeLi_adminUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiaGeLi_adminUITests.m; sourceTree = "<group>"; };
-		04CA0B36230273BC0054C6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CA0B4223029E060054C6C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04CA0B4523029F5D0054C6C8 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		04CA0B4623029F5D0054C6C8 /* CNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNavigationViewController.m; sourceTree = "<group>"; };
+		04CA0B4723029F5D0054C6C8 /* CNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNavigationViewController.h; sourceTree = "<group>"; };
+		04CA0B4923029F5E0054C6C8 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		04CA0B4A23029F5E0054C6C8 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		04CA0B4B23029F5E0054C6C8 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				04CA0B0F230273BB0054C6C8 /* JiaGeLi_admin */,
-				04CA0B28230273BC0054C6C8 /* JiaGeLi_adminTests */,
-				04CA0B33230273BC0054C6C8 /* JiaGeLi_adminUITests */,
 				04CA0B0E230273BB0054C6C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,35 +99,38 @@
 		04CA0B0F230273BB0054C6C8 /* JiaGeLi_admin */ = {
 			isa = PBXGroup;
 			children = (
+				04CA0B4323029F190054C6C8 /* Common */,
 				04CA0B10230273BB0054C6C8 /* AppDelegate.h */,
 				04CA0B11230273BB0054C6C8 /* AppDelegate.m */,
 				04CA0B13230273BB0054C6C8 /* ViewController.h */,
 				04CA0B14230273BB0054C6C8 /* ViewController.m */,
-				04CA0B16230273BB0054C6C8 /* Main.storyboard */,
 				04CA0B19230273BC0054C6C8 /* Assets.xcassets */,
-				04CA0B1B230273BC0054C6C8 /* LaunchScreen.storyboard */,
 				04CA0B1E230273BC0054C6C8 /* Info.plist */,
 				04CA0B1F230273BC0054C6C8 /* main.m */,
+				04CA0B4223029E060054C6C8 /* PrefixHeader.pch */,
 			);
 			path = JiaGeLi_admin;
 			sourceTree = "<group>";
 		};
-		04CA0B28230273BC0054C6C8 /* JiaGeLi_adminTests */ = {
+		04CA0B4323029F190054C6C8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				04CA0B29230273BC0054C6C8 /* JiaGeLi_adminTests.m */,
-				04CA0B2B230273BC0054C6C8 /* Info.plist */,
+				04CA0B4423029F280054C6C8 /* Base */,
 			);
-			path = JiaGeLi_adminTests;
+			path = Common;
 			sourceTree = "<group>";
 		};
-		04CA0B33230273BC0054C6C8 /* JiaGeLi_adminUITests */ = {
+		04CA0B4423029F280054C6C8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				04CA0B34230273BC0054C6C8 /* JiaGeLi_adminUITests.m */,
-				04CA0B36230273BC0054C6C8 /* Info.plist */,
+				04CA0B4523029F5D0054C6C8 /* BaseModel.h */,
+				04CA0B4923029F5E0054C6C8 /* BaseModel.m */,
+				04CA0B4B23029F5E0054C6C8 /* BaseViewController.h */,
+				04CA0B4A23029F5E0054C6C8 /* BaseViewController.m */,
+				04CA0B4723029F5D0054C6C8 /* CNavigationViewController.h */,
+				04CA0B4623029F5D0054C6C8 /* CNavigationViewController.m */,
 			);
-			path = JiaGeLi_adminUITests;
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04CA0B1D230273BC0054C6C8 /* LaunchScreen.storyboard in Resources */,
 				04CA0B1A230273BC0054C6C8 /* Assets.xcassets in Resources */,
-				04CA0B18230273BB0054C6C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +261,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CA0B4D23029F5E0054C6C8 /* CNavigationViewController.m in Sources */,
+				04CA0B4F23029F5E0054C6C8 /* BaseViewController.m in Sources */,
 				04CA0B15230273BB0054C6C8 /* ViewController.m in Sources */,
 				04CA0B20230273BC0054C6C8 /* main.m in Sources */,
+				04CA0B4E23029F5E0054C6C8 /* BaseModel.m in Sources */,
 				04CA0B12230273BB0054C6C8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04CA0B2A230273BC0054C6C8 /* JiaGeLi_adminTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04CA0B35230273BC0054C6C8 /* JiaGeLi_adminUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,25 +298,6 @@
 			targetProxy = 04CA0B31230273BC0054C6C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		04CA0B16230273BB0054C6C8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04CA0B17230273BB0054C6C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		04CA0B1B230273BC0054C6C8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04CA0B1C230273BC0054C6C8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		04CA0B37230273BC0054C6C8 /* Debug */ = {
@@ -436,6 +417,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JiaGeLi_admin/PrefixHeader.pch";
 				INFOPLIST_FILE = JiaGeLi_admin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +435,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JiaGeLi_admin/PrefixHeader.pch";
 				INFOPLIST_FILE = JiaGeLi_admin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
