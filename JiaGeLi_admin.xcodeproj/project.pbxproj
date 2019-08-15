@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,43 @@
 		04CA0B4D23029F5E0054C6C8 /* CNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4623029F5D0054C6C8 /* CNavigationViewController.m */; };
 		04CA0B4E23029F5E0054C6C8 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4923029F5E0054C6C8 /* BaseModel.m */; };
 		04CA0B4F23029F5E0054C6C8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4A23029F5E0054C6C8 /* BaseViewController.m */; };
+		0935B71E2303ABEF0080315F /* CheckCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B70A2303ABEF0080315F /* CheckCodeViewController.m */; };
+		0935B71F2303ABEF0080315F /* EditHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B70B2303ABEF0080315F /* EditHouseViewController.m */; };
+		0935B7202303ABEF0080315F /* HomeAdminViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B70C2303ABEF0080315F /* HomeAdminViewController.xib */; };
+		0935B7212303ABEF0080315F /* CheckCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */; };
+		0935B7222303ABEF0080315F /* HomeAdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B70E2303ABEF0080315F /* HomeAdminViewController.m */; };
+		0935B7232303ABEF0080315F /* CommentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B7122303ABEF0080315F /* CommentListViewController.m */; };
+		0935B7242303ABEF0080315F /* HomeAdminHeardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B7162303ABEF0080315F /* HomeAdminHeardView.m */; };
+		0935B7252303ABEF0080315F /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B7192303ABEF0080315F /* CommentTableViewCell.m */; };
+		0935B7262303ABEF0080315F /* HomeAdminHeardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B71A2303ABEF0080315F /* HomeAdminHeardView.xib */; };
+		0935B7272303ABEF0080315F /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B71C2303ABEF0080315F /* CommentTableViewCell.xib */; };
+		0935B7282303ABEF0080315F /* EidtHouseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B71D2303ABEF0080315F /* EidtHouseTableViewCell.m */; };
+		0935B72C2303AC230080315F /* JGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B72A2303AC230080315F /* JGLoginViewController.m */; };
+		0935B72D2303AC230080315F /* JGLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B72B2303AC230080315F /* JGLoginViewController.xib */; };
+		0935B7322303AC330080315F /* YLBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B72E2303AC320080315F /* YLBaseModel.m */; };
+		0935B7332303AC330080315F /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B72F2303AC320080315F /* LoginModel.m */; };
+		0935B7362303AC7B0080315F /* SaleHouseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B7342303AC7B0080315F /* SaleHouseModel.m */; };
+		0935B7392303AC920080315F /* YLWorkCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B7372303AC910080315F /* YLWorkCollectionViewCell.m */; };
+		0935B73C2303ACAE0080315F /* AttributeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B73A2303ACAD0080315F /* AttributeView.m */; };
+		0935B74023043D230080315F /* SaleHouseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B73D23043D220080315F /* SaleHouseView.m */; };
+		0935B74123043D230080315F /* SaleHouseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B73F23043D230080315F /* SaleHouseView.xib */; };
+		0935B74523043D470080315F /* RMPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B74323043D460080315F /* RMPickerView.xib */; };
+		0935B74623043D470080315F /* RMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B74423043D470080315F /* RMPickerView.m */; };
+		0935B75223043D6B0080315F /* UIButton+SYDFixMultiClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B74A23043D6B0080315F /* UIButton+SYDFixMultiClick.m */; };
+		0935B75323043D6B0080315F /* SVProgressHUD+YM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B74B23043D6B0080315F /* SVProgressHUD+YM.m */; };
+		0935B75423043D6B0080315F /* NSMutableDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B74C23043D6B0080315F /* NSMutableDictionary+Extension.m */; };
+		0935B75523043D6B0080315F /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B74D23043D6B0080315F /* NSString+Extension.m */; };
+		0935B75623043D6B0080315F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75023043D6B0080315F /* UIView+Extension.m */; };
+		0935B76023043DA00080315F /* MD5Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75823043DA00080315F /* MD5Encrypt.m */; };
+		0935B76123043DA00080315F /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75923043DA00080315F /* Common.m */; };
+		0935B76223043DA00080315F /* DataRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75A23043DA00080315F /* DataRequestManager.m */; };
+		0935B76323043DA00080315F /* TRClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75F23043DA00080315F /* TRClassHelper.m */; };
+		096A6D622304ECE700A48D5B /* EditTFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 096A6D602304ECE700A48D5B /* EditTFView.m */; };
+		096A6D632304ECE700A48D5B /* EditTFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096A6D612304ECE700A48D5B /* EditTFView.xib */; };
+		096A6D672304F86C00A48D5B /* JGLFindPasswardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096A6D652304F86C00A48D5B /* JGLFindPasswardViewController.xib */; };
+		096A6D682304F86C00A48D5B /* JGLFindPasswardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096A6D662304F86C00A48D5B /* JGLFindPasswardViewController.m */; };
+		096A6D6B2304F8ED00A48D5B /* JGLCacheSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 096A6D692304F8ED00A48D5B /* JGLCacheSingleton.m */; };
+		4F9EFB6345D1E1ECDA3357F7 /* libPods-JiaGeLi_admin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06FBEADFC3C0828EC2735D /* libPods-JiaGeLi_admin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +88,72 @@
 		04CA0B4923029F5E0054C6C8 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		04CA0B4A23029F5E0054C6C8 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		04CA0B4B23029F5E0054C6C8 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		0935B70A2303ABEF0080315F /* CheckCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckCodeViewController.m; sourceTree = "<group>"; };
+		0935B70B2303ABEF0080315F /* EditHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditHouseViewController.m; sourceTree = "<group>"; };
+		0935B70C2303ABEF0080315F /* HomeAdminViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeAdminViewController.xib; sourceTree = "<group>"; };
+		0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckCodeViewController.xib; sourceTree = "<group>"; };
+		0935B70E2303ABEF0080315F /* HomeAdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeAdminViewController.m; sourceTree = "<group>"; };
+		0935B70F2303ABEF0080315F /* CommentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentListViewController.h; sourceTree = "<group>"; };
+		0935B7102303ABEF0080315F /* EditHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditHouseViewController.h; sourceTree = "<group>"; };
+		0935B7112303ABEF0080315F /* CheckCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckCodeViewController.h; sourceTree = "<group>"; };
+		0935B7122303ABEF0080315F /* CommentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentListViewController.m; sourceTree = "<group>"; };
+		0935B7132303ABEF0080315F /* HomeAdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeAdminViewController.h; sourceTree = "<group>"; };
+		0935B7162303ABEF0080315F /* HomeAdminHeardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeAdminHeardView.m; sourceTree = "<group>"; };
+		0935B7172303ABEF0080315F /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		0935B7182303ABEF0080315F /* EidtHouseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EidtHouseTableViewCell.h; sourceTree = "<group>"; };
+		0935B7192303ABEF0080315F /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		0935B71A2303ABEF0080315F /* HomeAdminHeardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeAdminHeardView.xib; sourceTree = "<group>"; };
+		0935B71B2303ABEF0080315F /* HomeAdminHeardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeAdminHeardView.h; sourceTree = "<group>"; };
+		0935B71C2303ABEF0080315F /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		0935B71D2303ABEF0080315F /* EidtHouseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EidtHouseTableViewCell.m; sourceTree = "<group>"; };
+		0935B7292303AC220080315F /* JGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGLoginViewController.h; sourceTree = "<group>"; };
+		0935B72A2303AC230080315F /* JGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGLoginViewController.m; sourceTree = "<group>"; };
+		0935B72B2303AC230080315F /* JGLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JGLoginViewController.xib; sourceTree = "<group>"; };
+		0935B72E2303AC320080315F /* YLBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBaseModel.m; sourceTree = "<group>"; };
+		0935B72F2303AC320080315F /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		0935B7302303AC320080315F /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		0935B7312303AC330080315F /* YLBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBaseModel.h; sourceTree = "<group>"; };
+		0935B7342303AC7B0080315F /* SaleHouseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaleHouseModel.m; sourceTree = "<group>"; };
+		0935B7352303AC7B0080315F /* SaleHouseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaleHouseModel.h; sourceTree = "<group>"; };
+		0935B7372303AC910080315F /* YLWorkCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLWorkCollectionViewCell.m; sourceTree = "<group>"; };
+		0935B7382303AC920080315F /* YLWorkCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLWorkCollectionViewCell.h; sourceTree = "<group>"; };
+		0935B73A2303ACAD0080315F /* AttributeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeView.m; sourceTree = "<group>"; };
+		0935B73B2303ACAD0080315F /* AttributeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeView.h; sourceTree = "<group>"; };
+		0935B73D23043D220080315F /* SaleHouseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaleHouseView.m; sourceTree = "<group>"; };
+		0935B73E23043D220080315F /* SaleHouseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaleHouseView.h; sourceTree = "<group>"; };
+		0935B73F23043D230080315F /* SaleHouseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaleHouseView.xib; sourceTree = "<group>"; };
+		0935B74223043D460080315F /* RMPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMPickerView.h; sourceTree = "<group>"; };
+		0935B74323043D460080315F /* RMPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMPickerView.xib; sourceTree = "<group>"; };
+		0935B74423043D470080315F /* RMPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPickerView.m; sourceTree = "<group>"; };
+		0935B74823043D6B0080315F /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		0935B74923043D6B0080315F /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		0935B74A23043D6B0080315F /* UIButton+SYDFixMultiClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SYDFixMultiClick.m"; sourceTree = "<group>"; };
+		0935B74B23043D6B0080315F /* SVProgressHUD+YM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+YM.m"; sourceTree = "<group>"; };
+		0935B74C23043D6B0080315F /* NSMutableDictionary+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Extension.m"; sourceTree = "<group>"; };
+		0935B74D23043D6B0080315F /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		0935B74E23043D6B0080315F /* SVProgressHUD+YM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+YM.h"; sourceTree = "<group>"; };
+		0935B74F23043D6B0080315F /* UIButton+SYDFixMultiClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SYDFixMultiClick.h"; sourceTree = "<group>"; };
+		0935B75023043D6B0080315F /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		0935B75123043D6B0080315F /* NSMutableDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Extension.h"; sourceTree = "<group>"; };
+		0935B75823043DA00080315F /* MD5Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Encrypt.m; sourceTree = "<group>"; };
+		0935B75923043DA00080315F /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		0935B75A23043DA00080315F /* DataRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequestManager.m; sourceTree = "<group>"; };
+		0935B75B23043DA00080315F /* TRClassHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRClassHelper.h; sourceTree = "<group>"; };
+		0935B75C23043DA00080315F /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		0935B75D23043DA00080315F /* MD5Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Encrypt.h; sourceTree = "<group>"; };
+		0935B75E23043DA00080315F /* DataRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestManager.h; sourceTree = "<group>"; };
+		0935B75F23043DA00080315F /* TRClassHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRClassHelper.m; sourceTree = "<group>"; };
+		096A6D5F2304ECE400A48D5B /* EditTFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTFView.h; sourceTree = "<group>"; };
+		096A6D602304ECE700A48D5B /* EditTFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTFView.m; sourceTree = "<group>"; };
+		096A6D612304ECE700A48D5B /* EditTFView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditTFView.xib; sourceTree = "<group>"; };
+		096A6D642304F86B00A48D5B /* JGLFindPasswardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGLFindPasswardViewController.h; sourceTree = "<group>"; };
+		096A6D652304F86C00A48D5B /* JGLFindPasswardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JGLFindPasswardViewController.xib; sourceTree = "<group>"; };
+		096A6D662304F86C00A48D5B /* JGLFindPasswardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGLFindPasswardViewController.m; sourceTree = "<group>"; };
+		096A6D692304F8ED00A48D5B /* JGLCacheSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGLCacheSingleton.m; sourceTree = "<group>"; };
+		096A6D6A2304F8ED00A48D5B /* JGLCacheSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGLCacheSingleton.h; sourceTree = "<group>"; };
+		0C06FBEADFC3C0828EC2735D /* libPods-JiaGeLi_admin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiaGeLi_admin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CFC1841021C2B7AB81671F0 /* Pods-JiaGeLi_admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaGeLi_admin.release.xcconfig"; path = "Target Support Files/Pods-JiaGeLi_admin/Pods-JiaGeLi_admin.release.xcconfig"; sourceTree = "<group>"; };
+		4E40C6DDC410E63072C9C3E7 /* Pods-JiaGeLi_admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaGeLi_admin.debug.xcconfig"; path = "Target Support Files/Pods-JiaGeLi_admin/Pods-JiaGeLi_admin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F9EFB6345D1E1ECDA3357F7 /* libPods-JiaGeLi_admin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +187,8 @@
 			children = (
 				04CA0B0F230273BB0054C6C8 /* JiaGeLi_admin */,
 				04CA0B0E230273BB0054C6C8 /* Products */,
+				6F9F44F0AD3A04A5C1A14E75 /* Pods */,
+				560DD78942232D3AC45974BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +205,7 @@
 		04CA0B0F230273BB0054C6C8 /* JiaGeLi_admin */ = {
 			isa = PBXGroup;
 			children = (
+				0935B7082303ABEF0080315F /* admin */,
 				04CA0B4323029F190054C6C8 /* Common */,
 				04CA0B10230273BB0054C6C8 /* AppDelegate.h */,
 				04CA0B11230273BB0054C6C8 /* AppDelegate.m */,
@@ -115,6 +222,8 @@
 		04CA0B4323029F190054C6C8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0935B75723043DA00080315F /* Tool */,
+				0935B74723043D6B0080315F /* Catergory */,
 				04CA0B4423029F280054C6C8 /* Base */,
 			);
 			path = Common;
@@ -133,6 +242,131 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		0935B7082303ABEF0080315F /* admin */ = {
+			isa = PBXGroup;
+			children = (
+				0935B7092303ABEF0080315F /* Controller */,
+				0935B7142303ABEF0080315F /* model */,
+				0935B7152303ABEF0080315F /* View */,
+			);
+			path = admin;
+			sourceTree = "<group>";
+		};
+		0935B7092303ABEF0080315F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0935B7292303AC220080315F /* JGLoginViewController.h */,
+				0935B72A2303AC230080315F /* JGLoginViewController.m */,
+				0935B72B2303AC230080315F /* JGLoginViewController.xib */,
+				096A6D642304F86B00A48D5B /* JGLFindPasswardViewController.h */,
+				096A6D662304F86C00A48D5B /* JGLFindPasswardViewController.m */,
+				096A6D652304F86C00A48D5B /* JGLFindPasswardViewController.xib */,
+				0935B70A2303ABEF0080315F /* CheckCodeViewController.m */,
+				0935B70B2303ABEF0080315F /* EditHouseViewController.m */,
+				0935B70C2303ABEF0080315F /* HomeAdminViewController.xib */,
+				0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */,
+				0935B70E2303ABEF0080315F /* HomeAdminViewController.m */,
+				0935B70F2303ABEF0080315F /* CommentListViewController.h */,
+				0935B7102303ABEF0080315F /* EditHouseViewController.h */,
+				0935B7112303ABEF0080315F /* CheckCodeViewController.h */,
+				0935B7122303ABEF0080315F /* CommentListViewController.m */,
+				0935B7132303ABEF0080315F /* HomeAdminViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0935B7142303ABEF0080315F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				096A6D6A2304F8ED00A48D5B /* JGLCacheSingleton.h */,
+				096A6D692304F8ED00A48D5B /* JGLCacheSingleton.m */,
+				0935B7352303AC7B0080315F /* SaleHouseModel.h */,
+				0935B7342303AC7B0080315F /* SaleHouseModel.m */,
+				0935B7302303AC320080315F /* LoginModel.h */,
+				0935B72F2303AC320080315F /* LoginModel.m */,
+				0935B7312303AC330080315F /* YLBaseModel.h */,
+				0935B72E2303AC320080315F /* YLBaseModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0935B7152303ABEF0080315F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0935B73E23043D220080315F /* SaleHouseView.h */,
+				0935B73D23043D220080315F /* SaleHouseView.m */,
+				0935B73F23043D230080315F /* SaleHouseView.xib */,
+				0935B73B2303ACAD0080315F /* AttributeView.h */,
+				0935B73A2303ACAD0080315F /* AttributeView.m */,
+				0935B74223043D460080315F /* RMPickerView.h */,
+				0935B74423043D470080315F /* RMPickerView.m */,
+				0935B74323043D460080315F /* RMPickerView.xib */,
+				0935B7382303AC920080315F /* YLWorkCollectionViewCell.h */,
+				0935B7372303AC910080315F /* YLWorkCollectionViewCell.m */,
+				0935B7162303ABEF0080315F /* HomeAdminHeardView.m */,
+				0935B7172303ABEF0080315F /* CommentTableViewCell.h */,
+				0935B7182303ABEF0080315F /* EidtHouseTableViewCell.h */,
+				0935B7192303ABEF0080315F /* CommentTableViewCell.m */,
+				0935B71A2303ABEF0080315F /* HomeAdminHeardView.xib */,
+				0935B71B2303ABEF0080315F /* HomeAdminHeardView.h */,
+				0935B71C2303ABEF0080315F /* CommentTableViewCell.xib */,
+				0935B71D2303ABEF0080315F /* EidtHouseTableViewCell.m */,
+				096A6D5F2304ECE400A48D5B /* EditTFView.h */,
+				096A6D602304ECE700A48D5B /* EditTFView.m */,
+				096A6D612304ECE700A48D5B /* EditTFView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0935B74723043D6B0080315F /* Catergory */ = {
+			isa = PBXGroup;
+			children = (
+				0935B74823043D6B0080315F /* NSString+Extension.h */,
+				0935B74923043D6B0080315F /* UIView+Extension.h */,
+				0935B74A23043D6B0080315F /* UIButton+SYDFixMultiClick.m */,
+				0935B74B23043D6B0080315F /* SVProgressHUD+YM.m */,
+				0935B74C23043D6B0080315F /* NSMutableDictionary+Extension.m */,
+				0935B74D23043D6B0080315F /* NSString+Extension.m */,
+				0935B74E23043D6B0080315F /* SVProgressHUD+YM.h */,
+				0935B74F23043D6B0080315F /* UIButton+SYDFixMultiClick.h */,
+				0935B75023043D6B0080315F /* UIView+Extension.m */,
+				0935B75123043D6B0080315F /* NSMutableDictionary+Extension.h */,
+			);
+			path = Catergory;
+			sourceTree = "<group>";
+		};
+		0935B75723043DA00080315F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				0935B75823043DA00080315F /* MD5Encrypt.m */,
+				0935B75923043DA00080315F /* Common.m */,
+				0935B75A23043DA00080315F /* DataRequestManager.m */,
+				0935B75B23043DA00080315F /* TRClassHelper.h */,
+				0935B75C23043DA00080315F /* Common.h */,
+				0935B75D23043DA00080315F /* MD5Encrypt.h */,
+				0935B75E23043DA00080315F /* DataRequestManager.h */,
+				0935B75F23043DA00080315F /* TRClassHelper.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		560DD78942232D3AC45974BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C06FBEADFC3C0828EC2735D /* libPods-JiaGeLi_admin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F9F44F0AD3A04A5C1A14E75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E40C6DDC410E63072C9C3E7 /* Pods-JiaGeLi_admin.debug.xcconfig */,
+				3CFC1841021C2B7AB81671F0 /* Pods-JiaGeLi_admin.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,9 +374,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04CA0B39230273BC0054C6C8 /* Build configuration list for PBXNativeTarget "JiaGeLi_admin" */;
 			buildPhases = (
+				AE875CC7E65C0BCE786DBA55 /* [CP] Check Pods Manifest.lock */,
 				04CA0B09230273BB0054C6C8 /* Sources */,
 				04CA0B0A230273BB0054C6C8 /* Frameworks */,
 				04CA0B0B230273BB0054C6C8 /* Resources */,
+				78514748082A2391A4A80EF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,7 +472,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096A6D672304F86C00A48D5B /* JGLFindPasswardViewController.xib in Resources */,
+				0935B7262303ABEF0080315F /* HomeAdminHeardView.xib in Resources */,
+				096A6D632304ECE700A48D5B /* EditTFView.xib in Resources */,
+				0935B74523043D470080315F /* RMPickerView.xib in Resources */,
 				04CA0B1A230273BC0054C6C8 /* Assets.xcassets in Resources */,
+				0935B7202303ABEF0080315F /* HomeAdminViewController.xib in Resources */,
+				0935B72D2303AC230080315F /* JGLoginViewController.xib in Resources */,
+				0935B7212303ABEF0080315F /* CheckCodeViewController.xib in Resources */,
+				0935B74123043D230080315F /* SaleHouseView.xib in Resources */,
+				0935B7272303ABEF0080315F /* CommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,17 +501,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		78514748082A2391A4A80EF7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JiaGeLi_admin/Pods-JiaGeLi_admin-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JiaGeLi_admin/Pods-JiaGeLi_admin-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JiaGeLi_admin/Pods-JiaGeLi_admin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE875CC7E65C0BCE786DBA55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JiaGeLi_admin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04CA0B09230273BB0054C6C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				04CA0B4D23029F5E0054C6C8 /* CNavigationViewController.m in Sources */,
+				0935B7332303AC330080315F /* LoginModel.m in Sources */,
+				0935B75623043D6B0080315F /* UIView+Extension.m in Sources */,
+				0935B7392303AC920080315F /* YLWorkCollectionViewCell.m in Sources */,
+				0935B75423043D6B0080315F /* NSMutableDictionary+Extension.m in Sources */,
+				0935B75223043D6B0080315F /* UIButton+SYDFixMultiClick.m in Sources */,
+				0935B71E2303ABEF0080315F /* CheckCodeViewController.m in Sources */,
+				0935B73C2303ACAE0080315F /* AttributeView.m in Sources */,
+				096A6D622304ECE700A48D5B /* EditTFView.m in Sources */,
+				0935B76323043DA00080315F /* TRClassHelper.m in Sources */,
 				04CA0B4F23029F5E0054C6C8 /* BaseViewController.m in Sources */,
+				0935B74623043D470080315F /* RMPickerView.m in Sources */,
+				0935B7242303ABEF0080315F /* HomeAdminHeardView.m in Sources */,
+				0935B75523043D6B0080315F /* NSString+Extension.m in Sources */,
+				0935B7362303AC7B0080315F /* SaleHouseModel.m in Sources */,
 				04CA0B15230273BB0054C6C8 /* ViewController.m in Sources */,
+				0935B7282303ABEF0080315F /* EidtHouseTableViewCell.m in Sources */,
 				04CA0B20230273BC0054C6C8 /* main.m in Sources */,
+				0935B72C2303AC230080315F /* JGLoginViewController.m in Sources */,
+				0935B7222303ABEF0080315F /* HomeAdminViewController.m in Sources */,
+				0935B76023043DA00080315F /* MD5Encrypt.m in Sources */,
+				0935B7252303ABEF0080315F /* CommentTableViewCell.m in Sources */,
+				0935B76123043DA00080315F /* Common.m in Sources */,
+				0935B74023043D230080315F /* SaleHouseView.m in Sources */,
+				0935B7322303AC330080315F /* YLBaseModel.m in Sources */,
+				0935B75323043D6B0080315F /* SVProgressHUD+YM.m in Sources */,
+				0935B7232303ABEF0080315F /* CommentListViewController.m in Sources */,
+				0935B71F2303ABEF0080315F /* EditHouseViewController.m in Sources */,
+				096A6D6B2304F8ED00A48D5B /* JGLCacheSingleton.m in Sources */,
+				096A6D682304F86C00A48D5B /* JGLFindPasswardViewController.m in Sources */,
 				04CA0B4E23029F5E0054C6C8 /* BaseModel.m in Sources */,
 				04CA0B12230273BB0054C6C8 /* AppDelegate.m in Sources */,
+				0935B76223043DA00080315F /* DataRequestManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,9 +728,11 @@
 		};
 		04CA0B3A230273BC0054C6C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E40C6DDC410E63072C9C3E7 /* Pods-JiaGeLi_admin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HNKR73TV9Y;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JiaGeLi_admin/PrefixHeader.pch";
 				INFOPLIST_FILE = JiaGeLi_admin/Info.plist;
@@ -432,9 +748,11 @@
 		};
 		04CA0B3B230273BC0054C6C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CFC1841021C2B7AB81671F0 /* Pods-JiaGeLi_admin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HNKR73TV9Y;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JiaGeLi_admin/PrefixHeader.pch";
 				INFOPLIST_FILE = JiaGeLi_admin/Info.plist;
