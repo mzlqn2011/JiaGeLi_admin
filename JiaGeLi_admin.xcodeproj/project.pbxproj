@@ -14,6 +14,11 @@
 		04CA0B4D23029F5E0054C6C8 /* CNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4623029F5D0054C6C8 /* CNavigationViewController.m */; };
 		04CA0B4E23029F5E0054C6C8 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4923029F5E0054C6C8 /* BaseModel.m */; };
 		04CA0B4F23029F5E0054C6C8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4A23029F5E0054C6C8 /* BaseViewController.m */; };
+		04D6093E2306267A002F14FA /* DistributeGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6093D2306267A002F14FA /* DistributeGoodsVC.m */; };
+		04D609422306270F002F14FA /* OrderManageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D609412306270F002F14FA /* OrderManageVC.m */; };
+		04D6094523062795002F14FA /* OrderDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6094423062795002F14FA /* OrderDetailVC.m */; };
+		04D6094923062877002F14FA /* GoodsManageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6094823062877002F14FA /* GoodsManageVC.m */; };
+		04D6094C230628DD002F14FA /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6094B230628DD002F14FA /* ApplicationViewController.m */; };
 		0935B71E2303ABEF0080315F /* CheckCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B70A2303ABEF0080315F /* CheckCodeViewController.m */; };
 		0935B71F2303ABEF0080315F /* EditHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B70B2303ABEF0080315F /* EditHouseViewController.m */; };
 		0935B7212303ABEF0080315F /* CheckCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */; };
@@ -88,6 +93,16 @@
 		04CA0B4923029F5E0054C6C8 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		04CA0B4A23029F5E0054C6C8 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		04CA0B4B23029F5E0054C6C8 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		04D6093C2306267A002F14FA /* DistributeGoodsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistributeGoodsVC.h; sourceTree = "<group>"; };
+		04D6093D2306267A002F14FA /* DistributeGoodsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DistributeGoodsVC.m; sourceTree = "<group>"; };
+		04D609402306270F002F14FA /* OrderManageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderManageVC.h; sourceTree = "<group>"; };
+		04D609412306270F002F14FA /* OrderManageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderManageVC.m; sourceTree = "<group>"; };
+		04D6094323062795002F14FA /* OrderDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderDetailVC.h; sourceTree = "<group>"; };
+		04D6094423062795002F14FA /* OrderDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderDetailVC.m; sourceTree = "<group>"; };
+		04D6094723062877002F14FA /* GoodsManageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsManageVC.h; sourceTree = "<group>"; };
+		04D6094823062877002F14FA /* GoodsManageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsManageVC.m; sourceTree = "<group>"; };
+		04D6094A230628DD002F14FA /* ApplicationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationViewController.h; sourceTree = "<group>"; };
+		04D6094B230628DD002F14FA /* ApplicationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
 		0935B70A2303ABEF0080315F /* CheckCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckCodeViewController.m; sourceTree = "<group>"; };
 		0935B70B2303ABEF0080315F /* EditHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditHouseViewController.m; sourceTree = "<group>"; };
 		0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckCodeViewController.xib; sourceTree = "<group>"; };
@@ -223,9 +238,9 @@
 		04CA0B4323029F190054C6C8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0935B75723043DA00080315F /* Tool */,
-				0935B74723043D6B0080315F /* Catergory */,
 				04CA0B4423029F280054C6C8 /* Base */,
+				0935B74723043D6B0080315F /* Catergory */,
+				0935B75723043DA00080315F /* Tool */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -243,9 +258,41 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		04D6093B2306264C002F14FA /* 发布商品 */ = {
+			isa = PBXGroup;
+			children = (
+				04D6093C2306267A002F14FA /* DistributeGoodsVC.h */,
+				04D6093D2306267A002F14FA /* DistributeGoodsVC.m */,
+			);
+			path = "发布商品";
+			sourceTree = "<group>";
+		};
+		04D6093F23062693002F14FA /* 订单管理 */ = {
+			isa = PBXGroup;
+			children = (
+				04D609402306270F002F14FA /* OrderManageVC.h */,
+				04D609412306270F002F14FA /* OrderManageVC.m */,
+				04D6094323062795002F14FA /* OrderDetailVC.h */,
+				04D6094423062795002F14FA /* OrderDetailVC.m */,
+			);
+			path = "订单管理";
+			sourceTree = "<group>";
+		};
+		04D609462306284D002F14FA /* 商品管理 */ = {
+			isa = PBXGroup;
+			children = (
+				04D6094723062877002F14FA /* GoodsManageVC.h */,
+				04D6094823062877002F14FA /* GoodsManageVC.m */,
+			);
+			path = "商品管理";
+			sourceTree = "<group>";
+		};
 		0935B7082303ABEF0080315F /* admin */ = {
 			isa = PBXGroup;
 			children = (
+				04D609462306284D002F14FA /* 商品管理 */,
+				04D6093F23062693002F14FA /* 订单管理 */,
+				04D6093B2306264C002F14FA /* 发布商品 */,
 				0935B7092303ABEF0080315F /* Controller */,
 				0935B7142303ABEF0080315F /* model */,
 				0935B7152303ABEF0080315F /* View */,
@@ -262,15 +309,17 @@
 				096A6D642304F86B00A48D5B /* JGLFindPasswardViewController.h */,
 				096A6D662304F86C00A48D5B /* JGLFindPasswardViewController.m */,
 				096A6D652304F86C00A48D5B /* JGLFindPasswardViewController.xib */,
+				0935B7112303ABEF0080315F /* CheckCodeViewController.h */,
 				0935B70A2303ABEF0080315F /* CheckCodeViewController.m */,
-				0935B70B2303ABEF0080315F /* EditHouseViewController.m */,
 				0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */,
+				0935B7132303ABEF0080315F /* HomeAdminViewController.h */,
 				0935B70E2303ABEF0080315F /* HomeAdminViewController.m */,
 				0935B70F2303ABEF0080315F /* CommentListViewController.h */,
-				0935B7102303ABEF0080315F /* EditHouseViewController.h */,
-				0935B7112303ABEF0080315F /* CheckCodeViewController.h */,
 				0935B7122303ABEF0080315F /* CommentListViewController.m */,
-				0935B7132303ABEF0080315F /* HomeAdminViewController.h */,
+				0935B7102303ABEF0080315F /* EditHouseViewController.h */,
+				0935B70B2303ABEF0080315F /* EditHouseViewController.m */,
+				04D6094A230628DD002F14FA /* ApplicationViewController.h */,
+				04D6094B230628DD002F14FA /* ApplicationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,27 +344,27 @@
 		0935B7152303ABEF0080315F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0935B73E23043D220080315F /* SaleHouseView.h */,
-				0935B73D23043D220080315F /* SaleHouseView.m */,
-				0935B73F23043D230080315F /* SaleHouseView.xib */,
 				0935B73B2303ACAD0080315F /* AttributeView.h */,
 				0935B73A2303ACAD0080315F /* AttributeView.m */,
-				0935B74223043D460080315F /* RMPickerView.h */,
-				0935B74423043D470080315F /* RMPickerView.m */,
-				0935B74323043D460080315F /* RMPickerView.xib */,
-				0935B7382303AC920080315F /* YLWorkCollectionViewCell.h */,
-				0935B7372303AC910080315F /* YLWorkCollectionViewCell.m */,
-				0935B7162303ABEF0080315F /* HomeAdminHeardView.m */,
 				0935B7172303ABEF0080315F /* CommentTableViewCell.h */,
-				0935B7182303ABEF0080315F /* EidtHouseTableViewCell.h */,
 				0935B7192303ABEF0080315F /* CommentTableViewCell.m */,
-				0935B71A2303ABEF0080315F /* HomeAdminHeardView.xib */,
-				0935B71B2303ABEF0080315F /* HomeAdminHeardView.h */,
 				0935B71C2303ABEF0080315F /* CommentTableViewCell.xib */,
-				0935B71D2303ABEF0080315F /* EidtHouseTableViewCell.m */,
 				096A6D5F2304ECE400A48D5B /* EditTFView.h */,
 				096A6D602304ECE700A48D5B /* EditTFView.m */,
 				096A6D612304ECE700A48D5B /* EditTFView.xib */,
+				0935B7182303ABEF0080315F /* EidtHouseTableViewCell.h */,
+				0935B71D2303ABEF0080315F /* EidtHouseTableViewCell.m */,
+				0935B71B2303ABEF0080315F /* HomeAdminHeardView.h */,
+				0935B7162303ABEF0080315F /* HomeAdminHeardView.m */,
+				0935B71A2303ABEF0080315F /* HomeAdminHeardView.xib */,
+				0935B74223043D460080315F /* RMPickerView.h */,
+				0935B74423043D470080315F /* RMPickerView.m */,
+				0935B74323043D460080315F /* RMPickerView.xib */,
+				0935B73E23043D220080315F /* SaleHouseView.h */,
+				0935B73D23043D220080315F /* SaleHouseView.m */,
+				0935B73F23043D230080315F /* SaleHouseView.xib */,
+				0935B7382303AC920080315F /* YLWorkCollectionViewCell.h */,
+				0935B7372303AC910080315F /* YLWorkCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,16 +372,16 @@
 		0935B74723043D6B0080315F /* Catergory */ = {
 			isa = PBXGroup;
 			children = (
-				0935B74823043D6B0080315F /* NSString+Extension.h */,
-				0935B74923043D6B0080315F /* UIView+Extension.h */,
-				0935B74A23043D6B0080315F /* UIButton+SYDFixMultiClick.m */,
-				0935B74B23043D6B0080315F /* SVProgressHUD+YM.m */,
+				0935B75123043D6B0080315F /* NSMutableDictionary+Extension.h */,
 				0935B74C23043D6B0080315F /* NSMutableDictionary+Extension.m */,
+				0935B74823043D6B0080315F /* NSString+Extension.h */,
 				0935B74D23043D6B0080315F /* NSString+Extension.m */,
 				0935B74E23043D6B0080315F /* SVProgressHUD+YM.h */,
+				0935B74B23043D6B0080315F /* SVProgressHUD+YM.m */,
 				0935B74F23043D6B0080315F /* UIButton+SYDFixMultiClick.h */,
+				0935B74A23043D6B0080315F /* UIButton+SYDFixMultiClick.m */,
+				0935B74923043D6B0080315F /* UIView+Extension.h */,
 				0935B75023043D6B0080315F /* UIView+Extension.m */,
-				0935B75123043D6B0080315F /* NSMutableDictionary+Extension.h */,
 			);
 			path = Catergory;
 			sourceTree = "<group>";
@@ -340,13 +389,13 @@
 		0935B75723043DA00080315F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				0935B75823043DA00080315F /* MD5Encrypt.m */,
-				0935B75923043DA00080315F /* Common.m */,
-				0935B75A23043DA00080315F /* DataRequestManager.m */,
-				0935B75B23043DA00080315F /* TRClassHelper.h */,
 				0935B75C23043DA00080315F /* Common.h */,
-				0935B75D23043DA00080315F /* MD5Encrypt.h */,
+				0935B75923043DA00080315F /* Common.m */,
 				0935B75E23043DA00080315F /* DataRequestManager.h */,
+				0935B75A23043DA00080315F /* DataRequestManager.m */,
+				0935B75D23043DA00080315F /* MD5Encrypt.h */,
+				0935B75823043DA00080315F /* MD5Encrypt.m */,
+				0935B75B23043DA00080315F /* TRClassHelper.h */,
 				0935B75F23043DA00080315F /* TRClassHelper.m */,
 			);
 			path = Tool;
@@ -551,8 +600,11 @@
 			files = (
 				04CA0B4D23029F5E0054C6C8 /* CNavigationViewController.m in Sources */,
 				0935B7332303AC330080315F /* LoginModel.m in Sources */,
+				04D6094923062877002F14FA /* GoodsManageVC.m in Sources */,
 				0935B75623043D6B0080315F /* UIView+Extension.m in Sources */,
 				0935B7392303AC920080315F /* YLWorkCollectionViewCell.m in Sources */,
+				04D6093E2306267A002F14FA /* DistributeGoodsVC.m in Sources */,
+				04D6094C230628DD002F14FA /* ApplicationViewController.m in Sources */,
 				0935B75423043D6B0080315F /* NSMutableDictionary+Extension.m in Sources */,
 				0935B75223043D6B0080315F /* UIButton+SYDFixMultiClick.m in Sources */,
 				0935B7242303ABEF0080315F /* HomeAdminHeardView.m in Sources */,
@@ -578,7 +630,9 @@
 				0935B75323043D6B0080315F /* SVProgressHUD+YM.m in Sources */,
 				0935B7232303ABEF0080315F /* CommentListViewController.m in Sources */,
 				0935B71F2303ABEF0080315F /* EditHouseViewController.m in Sources */,
+				04D609422306270F002F14FA /* OrderManageVC.m in Sources */,
 				096A6D6B2304F8ED00A48D5B /* JGLCacheSingleton.m in Sources */,
+				04D6094523062795002F14FA /* OrderDetailVC.m in Sources */,
 				096A6D682304F86C00A48D5B /* JGLFindPasswardViewController.m in Sources */,
 				04CA0B4E23029F5E0054C6C8 /* BaseModel.m in Sources */,
 				04CA0B12230273BB0054C6C8 /* AppDelegate.m in Sources */,
