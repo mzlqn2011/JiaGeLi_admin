@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Common.h"
 //39.98.214.123
 //47.104.143.166
 NS_ASSUME_NONNULL_BEGIN
 #define Domian  @"http://39.98.214.123"
 #define RootUrl @"http://39.98.214.123/jzapp/api/" //地址
-#define kProductUrl "Product.php?action="
-#define kUserUrl    "User.php?action="
+//#define kProductUrl "Product.php?action="
+#define kUserUrl    "Seller.php?action="
 #define kServiceUrl    "Service.php?action="
 
 #define NetWork_Success [jsonDic[@"code"]integerValue] == 0

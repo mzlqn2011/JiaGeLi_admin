@@ -16,7 +16,6 @@
 		04CA0B4F23029F5E0054C6C8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4A23029F5E0054C6C8 /* BaseViewController.m */; };
 		0935B71E2303ABEF0080315F /* CheckCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B70A2303ABEF0080315F /* CheckCodeViewController.m */; };
 		0935B71F2303ABEF0080315F /* EditHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B70B2303ABEF0080315F /* EditHouseViewController.m */; };
-		0935B7202303ABEF0080315F /* HomeAdminViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B70C2303ABEF0080315F /* HomeAdminViewController.xib */; };
 		0935B7212303ABEF0080315F /* CheckCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */; };
 		0935B7222303ABEF0080315F /* HomeAdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B70E2303ABEF0080315F /* HomeAdminViewController.m */; };
 		0935B7232303ABEF0080315F /* CommentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B7122303ABEF0080315F /* CommentListViewController.m */; };
@@ -50,6 +49,7 @@
 		096A6D672304F86C00A48D5B /* JGLFindPasswardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096A6D652304F86C00A48D5B /* JGLFindPasswardViewController.xib */; };
 		096A6D682304F86C00A48D5B /* JGLFindPasswardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096A6D662304F86C00A48D5B /* JGLFindPasswardViewController.m */; };
 		096A6D6B2304F8ED00A48D5B /* JGLCacheSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 096A6D692304F8ED00A48D5B /* JGLCacheSingleton.m */; };
+		096A6D6E230539A700A48D5B /* SHJPagesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 096A6D6C230539A600A48D5B /* SHJPagesModel.m */; };
 		4F9EFB6345D1E1ECDA3357F7 /* libPods-JiaGeLi_admin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06FBEADFC3C0828EC2735D /* libPods-JiaGeLi_admin.a */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +90,6 @@
 		04CA0B4B23029F5E0054C6C8 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		0935B70A2303ABEF0080315F /* CheckCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckCodeViewController.m; sourceTree = "<group>"; };
 		0935B70B2303ABEF0080315F /* EditHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditHouseViewController.m; sourceTree = "<group>"; };
-		0935B70C2303ABEF0080315F /* HomeAdminViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeAdminViewController.xib; sourceTree = "<group>"; };
 		0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckCodeViewController.xib; sourceTree = "<group>"; };
 		0935B70E2303ABEF0080315F /* HomeAdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeAdminViewController.m; sourceTree = "<group>"; };
 		0935B70F2303ABEF0080315F /* CommentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentListViewController.h; sourceTree = "<group>"; };
@@ -151,6 +150,8 @@
 		096A6D662304F86C00A48D5B /* JGLFindPasswardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGLFindPasswardViewController.m; sourceTree = "<group>"; };
 		096A6D692304F8ED00A48D5B /* JGLCacheSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGLCacheSingleton.m; sourceTree = "<group>"; };
 		096A6D6A2304F8ED00A48D5B /* JGLCacheSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGLCacheSingleton.h; sourceTree = "<group>"; };
+		096A6D6C230539A600A48D5B /* SHJPagesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHJPagesModel.m; sourceTree = "<group>"; };
+		096A6D6D230539A700A48D5B /* SHJPagesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHJPagesModel.h; sourceTree = "<group>"; };
 		0C06FBEADFC3C0828EC2735D /* libPods-JiaGeLi_admin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiaGeLi_admin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CFC1841021C2B7AB81671F0 /* Pods-JiaGeLi_admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaGeLi_admin.release.xcconfig"; path = "Target Support Files/Pods-JiaGeLi_admin/Pods-JiaGeLi_admin.release.xcconfig"; sourceTree = "<group>"; };
 		4E40C6DDC410E63072C9C3E7 /* Pods-JiaGeLi_admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaGeLi_admin.debug.xcconfig"; path = "Target Support Files/Pods-JiaGeLi_admin/Pods-JiaGeLi_admin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -263,7 +264,6 @@
 				096A6D652304F86C00A48D5B /* JGLFindPasswardViewController.xib */,
 				0935B70A2303ABEF0080315F /* CheckCodeViewController.m */,
 				0935B70B2303ABEF0080315F /* EditHouseViewController.m */,
-				0935B70C2303ABEF0080315F /* HomeAdminViewController.xib */,
 				0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */,
 				0935B70E2303ABEF0080315F /* HomeAdminViewController.m */,
 				0935B70F2303ABEF0080315F /* CommentListViewController.h */,
@@ -278,6 +278,8 @@
 		0935B7142303ABEF0080315F /* model */ = {
 			isa = PBXGroup;
 			children = (
+				096A6D6D230539A700A48D5B /* SHJPagesModel.h */,
+				096A6D6C230539A600A48D5B /* SHJPagesModel.m */,
 				096A6D6A2304F8ED00A48D5B /* JGLCacheSingleton.h */,
 				096A6D692304F8ED00A48D5B /* JGLCacheSingleton.m */,
 				0935B7352303AC7B0080315F /* SaleHouseModel.h */,
@@ -477,7 +479,6 @@
 				096A6D632304ECE700A48D5B /* EditTFView.xib in Resources */,
 				0935B74523043D470080315F /* RMPickerView.xib in Resources */,
 				04CA0B1A230273BC0054C6C8 /* Assets.xcassets in Resources */,
-				0935B7202303ABEF0080315F /* HomeAdminViewController.xib in Resources */,
 				0935B72D2303AC230080315F /* JGLoginViewController.xib in Resources */,
 				0935B7212303ABEF0080315F /* CheckCodeViewController.xib in Resources */,
 				0935B74123043D230080315F /* SaleHouseView.xib in Resources */,
@@ -554,16 +555,17 @@
 				0935B7392303AC920080315F /* YLWorkCollectionViewCell.m in Sources */,
 				0935B75423043D6B0080315F /* NSMutableDictionary+Extension.m in Sources */,
 				0935B75223043D6B0080315F /* UIButton+SYDFixMultiClick.m in Sources */,
+				0935B7242303ABEF0080315F /* HomeAdminHeardView.m in Sources */,
 				0935B71E2303ABEF0080315F /* CheckCodeViewController.m in Sources */,
 				0935B73C2303ACAE0080315F /* AttributeView.m in Sources */,
 				096A6D622304ECE700A48D5B /* EditTFView.m in Sources */,
 				0935B76323043DA00080315F /* TRClassHelper.m in Sources */,
 				04CA0B4F23029F5E0054C6C8 /* BaseViewController.m in Sources */,
 				0935B74623043D470080315F /* RMPickerView.m in Sources */,
-				0935B7242303ABEF0080315F /* HomeAdminHeardView.m in Sources */,
 				0935B75523043D6B0080315F /* NSString+Extension.m in Sources */,
 				0935B7362303AC7B0080315F /* SaleHouseModel.m in Sources */,
 				04CA0B15230273BB0054C6C8 /* ViewController.m in Sources */,
+				096A6D6E230539A700A48D5B /* SHJPagesModel.m in Sources */,
 				0935B7282303ABEF0080315F /* EidtHouseTableViewCell.m in Sources */,
 				04CA0B20230273BC0054C6C8 /* main.m in Sources */,
 				0935B72C2303AC230080315F /* JGLoginViewController.m in Sources */,

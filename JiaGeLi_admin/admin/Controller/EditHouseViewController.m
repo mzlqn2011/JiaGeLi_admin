@@ -113,7 +113,7 @@
         return;
     }
     NSString *action = [NSString stringWithFormat:@"%s%@", kServiceUrl, @"houseTradeAdd"];
-    NSDictionary *paramDic = @{@"user_id":JGLSingle.userModel.user_id,
+    NSDictionary *paramDic = @{@"user_id":JGLSingle.userModel.seller_id,
                                @"name":JGLSingle.userModel.auth_token,
                                @"birth":JGLSingle.userModel.auth_token,
                                @"sex":JGLSingle.userModel.auth_token,

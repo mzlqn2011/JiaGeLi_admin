@@ -7,6 +7,8 @@
 //
 
 #import "JGLoginViewController.h"
+#import "HomeAdminViewController.h"
+#import "CNavigationViewController.h"
 #import "UIButton+SYDFixMultiClick.h"
 #import "NSString+JKNormalRegex.h"
 #import "JGLFindPasswardViewController.h"
@@ -92,10 +94,10 @@
 
 #pragma mark - 登录/注册按钮
 - (IBAction)loginBtnClick:(UIButton *)sender {
-//#if DEBUG
-//    self.phoneTextField.text = @"18316447658";
-//    self.codeTextField.text = @"123456";
-//#endif
+#if DEBUG
+    self.phoneTextField.text = @"18316447658";
+    self.codeTextField.text = @"123456";
+#endif
     if (self.phoneTextField.text.length == 0) {
         [SVProgressHUD displayInfoWithStatus:@"请输入电话号码"];
         return;
@@ -240,18 +242,16 @@
           LoginModel *loginModel = [LoginModel mj_objectWithKeyValues:jsonDic[NetWork_Data]];
               [JGLSingle login:loginModel];
             if(JGLSingle.userModel.safe_code){
-                NSString * s = [NSString stringWithFormat:@"%@+%@",JGLSingle.userModel.user_id,JGLSingle.userModel.safe_code];
+                NSString * s = [NSString stringWithFormat:@"%@+%@",JGLSingle.userModel.seller_id,JGLSingle.userModel.safe_code];
 
                 JGLSingle.userModel.auth_token = [MD5Encrypt MD5ForLower32Bate:s];
             }else{
                 JGLSingle.userModel.auth_token = @"90c58ac60dccbf4b1810d947e1407488";
             }
-            
-            [self dismissViewControllerAnimated:YES completion:^{
-                if (self.loginSuccessBlock) {
-                    self.loginSuccessBlock();
-                }
-            }];
+           
+            HomeAdminViewController *rootVc = [[HomeAdminViewController alloc] init];
+            CNavigationViewController *navigationViewController = [[CNavigationViewController alloc] initWithRootViewController:rootVc];
+            kWindow.rootViewController = navigationViewController;
         } else {
               [SVProgressHUD displayInfoWithStatus:jsonDic[NetWork_Msg]];
         }

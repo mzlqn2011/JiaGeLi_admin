@@ -9,11 +9,13 @@
 
 #import "CommentListViewController.h"
 #import "CommentTableViewCell.h"
+#import "SHJPagesModel.h"
 @interface CommentListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *dataSource;
 @property (nonatomic,strong) UILabel *count;
 @property (nonatomic,assign) NSInteger totalCount;
+@property (nonatomic, strong) SHJPagesModel *pageModel;
 @end
 
 @implementation CommentListViewController
@@ -27,6 +29,22 @@
     
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"CommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"CommentTableViewCell"];
+    // 下拉刷新
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        self.pageModel.page = 1;
+        [self.dataSource removeAllObjects];
+        [self loadListData];
+    }];
+    
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        self.pageModel.page += 1;
+        [self loadListData];
+    }];
+}
+- (void)refreshTableView {
+    self.pageModel.page = 1;
+    [self.dataSource removeAllObjects];
+    [self.tableView reloadData];
 }
 -(UITableView *)tableView{
     if (!_tableView) {
@@ -47,7 +65,14 @@
     }
     return _dataSource;
 }
-
+- (SHJPagesModel *)pageModel {
+    if (_pageModel == nil) {
+        _pageModel = [[SHJPagesModel alloc] init];
+        _pageModel.page = 1;
+        _pageModel.page = 10;
+    }
+    return _pageModel;
+}
 #pragma mark ---- Delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -99,5 +124,35 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     return [[UIView alloc]init];
+}
+
+- (void)loadListData
+{
+    NSString *action = [NSString stringWithFormat:@"%s%@", kUserUrl, @"commentList"];
+    NSDictionary *paramDic = @{@"seller_id":JGLSingle.userModel.seller_id,@"auth_token":JGLSingle.userModel.auth_token,@"page":@(self.pageModel.page),@"page":@(self.pageModel.rows)};
+    
+    [kDataRequestManager POST2RequestWithUrl:action parameters:paramDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        if (NetData_Eexist) {
+             NSArray *dataArr = [Common getDicArrayFromArrayDic:jsonDic[NetWork_Data]];
+            if (dataArr.count == 0) {
+                if (self.dataSource.count == 0) {
+//                    self.tableView.tableFooterView = self.footerView;
+                }
+                else {
+                    [self.tableView.mj_footer endRefreshingWithNoMoreData];
+                }
+            }else {
+                [self.dataSource addObjectsFromArray:dataArr];
+               
+            }
+        }
+        [self.tableView reloadData];
+    } failed:^(NSError * _Nonnull error) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+    }];
+    
 }
 @end

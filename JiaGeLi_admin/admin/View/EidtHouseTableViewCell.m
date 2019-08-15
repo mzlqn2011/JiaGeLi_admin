@@ -23,7 +23,7 @@
 - (void)initUI {
     self.attributeArray = @[@"满两年",@"电梯房",@"有车位",@"精装修"].mutableCopy;
     NSArray * titles = @[@[@"小区名称",@"门牌号",@"期望售价",@"户型",@"朝向",@"面积",@"楼层",@"房屋类型",@"产权"],@[@"满两年",@"电梯房",@"有车位",@"精装修"],@[@"开发商",@"绿化率",@"年代",@"容积率",@"建筑类型"],@[@"描述详情"],@[@"称呼",@"联系方式"]];
-     NSArray * texts = @[@[@"基本信息"],@[@"选择标签"],@[@"小区信息"],@[@"房源描述"],@[@"个人信息"]];
+     NSArray * texts = @[@"基本信息",@"选择标签",@"小区信息",@"房源描述",@"个人信息"];
     NSArray * showPopArr = @[@"楼层"];
     __block CGFloat y = 0;
     [titles enumerateObjectsUsingBlock:^(NSArray* arr, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -35,7 +35,9 @@
             UIView * v = [[UIView alloc]initWithFrame:CGRectMake(0, y, kScreenWidth, 40)];
             v.backgroundColor = kWhiteColor;
             UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(18, 20, kScreenWidth -18, 20)];
-            label.text = texts[idx];
+            if(texts.count>idx){
+               label.text = texts[idx];
+            }
             label.font = font(16);
             label.textColor = k3GrayFontColor;
             [v addSubview:label];

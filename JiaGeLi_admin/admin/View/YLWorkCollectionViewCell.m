@@ -15,7 +15,7 @@
     if (self) {
         [self.contentView addSubview:self.imageView];
         [self.contentView addSubview:self.titleLabel];
-
+        self.contentView.backgroundColor = kWhiteColor;
         
         [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.height.mas_equalTo(40);

@@ -33,7 +33,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.0" green="0.34901960784313724" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="KMY-nG-CZ7"/>
                         <constraint firstItem="suk-AL-zzX" firstAttribute="centerY" secondItem="cZy-Kg-paB" secondAttribute="centerY" id="Lgu-Nu-vjZ"/>
@@ -44,10 +44,11 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neT-cQ-vyE">
-                    <rect key="frame" x="0.0" y="86" width="82" height="54"/>
+                    <rect key="frame" x="0.0" y="86" width="82" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日成交额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv2-Jo-mx0">
                             <rect key="frame" x="0.0" y="0.0" width="82" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="Czg-T3-L9M"/>
                             </constraints>
@@ -57,6 +58,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1z-al-6vZ">
                             <rect key="frame" x="0.0" y="21" width="82" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="veL-ek-Mbh"/>
                             </constraints>
@@ -76,10 +78,11 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eps-Mw-z4J">
-                    <rect key="frame" x="83" y="86" width="82" height="54"/>
+                    <rect key="frame" x="83" y="86" width="82" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总成交额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi5-qd-P1d">
                             <rect key="frame" x="0.0" y="0.0" width="82" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="5oC-Ph-k27"/>
                             </constraints>
@@ -89,6 +92,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouC-de-5jz">
                             <rect key="frame" x="0.0" y="21" width="82" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="PYH-KC-Jhe"/>
                             </constraints>
@@ -108,10 +112,11 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbO-dQ-pld">
-                    <rect key="frame" x="166" y="86" width="82" height="54"/>
+                    <rect key="frame" x="166" y="86" width="82" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本月成交额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xD-XV-ntp">
                             <rect key="frame" x="0.0" y="0.0" width="82" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="9oF-yt-dfW"/>
                             </constraints>
@@ -121,6 +126,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RN-9Q-4N7">
                             <rect key="frame" x="0.0" y="21" width="82" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="seI-HE-PMz"/>
                             </constraints>
@@ -140,10 +146,11 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bz4-if-f8o">
-                    <rect key="frame" x="249" y="86" width="82" height="54"/>
+                    <rect key="frame" x="249" y="86" width="82" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总订单数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8T-is-hyd">
                             <rect key="frame" x="0.0" y="0.0" width="82" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="kgT-eh-o5f"/>
                             </constraints>
@@ -153,6 +160,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lb-Nv-cFt">
                             <rect key="frame" x="0.0" y="21" width="82" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="NVI-Hs-spW"/>
                             </constraints>
@@ -172,10 +180,11 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZ9-Lb-ZbM">
-                    <rect key="frame" x="332" y="86" width="82" height="54"/>
+                    <rect key="frame" x="332" y="86" width="82" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日订单数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMz-3d-Exs">
                             <rect key="frame" x="0.0" y="0.0" width="82" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="PVa-jB-f3a"/>
                             </constraints>
@@ -185,6 +194,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyO-ut-S7T">
                             <rect key="frame" x="0.0" y="21" width="82" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="L7F-SE-Na3"/>
                             </constraints>
@@ -204,11 +214,10 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="cZy-Kg-paB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0ho-ve-iBh"/>
                 <constraint firstItem="JZ9-Lb-ZbM" firstAttribute="centerY" secondItem="neT-cQ-vyE" secondAttribute="centerY" id="24p-eQ-E3S"/>
-                <constraint firstAttribute="bottom" secondItem="JZ9-Lb-ZbM" secondAttribute="bottom" id="28Y-gF-FYy"/>
                 <constraint firstItem="Bz4-if-f8o" firstAttribute="width" secondItem="neT-cQ-vyE" secondAttribute="width" id="7WI-eB-NL4"/>
                 <constraint firstItem="neT-cQ-vyE" firstAttribute="top" secondItem="cZy-Kg-paB" secondAttribute="bottom" id="7qK-Uf-WtM"/>
                 <constraint firstItem="EbO-dQ-pld" firstAttribute="centerY" secondItem="neT-cQ-vyE" secondAttribute="centerY" id="83j-3l-uSM"/>
@@ -226,7 +235,7 @@
                 <constraint firstItem="JZ9-Lb-ZbM" firstAttribute="top" secondItem="cZy-Kg-paB" secondAttribute="bottom" id="VTn-9a-iP6"/>
                 <constraint firstItem="cZy-Kg-paB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Xq9-cZ-A3c"/>
                 <constraint firstItem="neT-cQ-vyE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ctO-Pg-e7c"/>
-                <constraint firstAttribute="bottom" secondItem="neT-cQ-vyE" secondAttribute="bottom" id="kbo-CC-dtc"/>
+                <constraint firstAttribute="bottom" secondItem="neT-cQ-vyE" secondAttribute="bottom" constant="10" id="kbo-CC-dtc"/>
                 <constraint firstItem="Eps-Mw-z4J" firstAttribute="leading" secondItem="neT-cQ-vyE" secondAttribute="trailing" constant="1" id="mqU-5n-LJ1"/>
                 <constraint firstItem="Eps-Mw-z4J" firstAttribute="width" secondItem="neT-cQ-vyE" secondAttribute="width" id="wL7-kw-7Q4"/>
                 <constraint firstItem="EbO-dQ-pld" firstAttribute="leading" secondItem="Eps-Mw-z4J" secondAttribute="trailing" constant="1" id="yre-hz-b1Q"/>

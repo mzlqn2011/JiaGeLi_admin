@@ -11,13 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginModel : YLBaseModel
-@property (nonatomic, copy) NSString *user_id;
+@property (nonatomic, copy) NSString *seller_id;
 @property (nonatomic, copy) NSString *tel;
-@property (nonatomic, copy) NSString *sex;//（0男1女）
-@property (nonatomic, copy) NSString *photo;
+@property (nonatomic, copy) NSString *company_name;//店铺名称
+@property (nonatomic, copy) NSString *logo;//店铺图片地址
+@property (nonatomic, copy) NSString *addr_code;//地址编码
 @property (nonatomic, copy) NSString *safe_code;//安全码，认证时候用到
-@property (nonatomic, copy) NSString *score;//积分
-@property (nonatomic, copy) NSString *house_id;//门牌号id(0表示未认证)
+@property (nonatomic, copy) NSString *addr;//详细地址
+@property (nonatomic, copy) NSString *type;//卖家类型（0物业自营，1三方卖家）
 @property (nonatomic, copy) NSString *src;//头像地址
 @property (nonatomic, copy) NSString *thumb_src;//头像略缩地址
 @property (nonatomic, copy) NSString *auth_token;

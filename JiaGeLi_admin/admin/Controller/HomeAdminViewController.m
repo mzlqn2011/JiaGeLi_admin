@@ -8,9 +8,11 @@
 
 #import "HomeAdminViewController.h"
 #import "YLWorkCollectionViewCell.h"
+#import "CommentListViewController.h"
+#import "EditHouseViewController.h"
 #import "HomeAdminHeardView.h"
 @interface HomeAdminViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
-@property (nonatomic, strong) HomeAdminHeardView * heardView;
+//@property (nonatomic, weak) HomeAdminHeardView * heardAdminView;
 @property (nonatomic, strong) UICollectionView * collectionView;
 
 @end
@@ -20,26 +22,34 @@
     NSArray * imageNames;
     NSArray * titles;
     NSArray * controllerNames;
+    NSString * day_income;
+    NSString * total_income;
+    NSString * month_income;
+    NSString * week_income;
+    NSString * order_count;
+   
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.title = @"店铺管理";
+    [self initData];
     [self setcontentView];
+    [self requestIncomeData];
 }
 - (void)initData{
     
     titles = @[@"发布商品",@"商品管理",@"订单管理",@"评论管理",@"房屋中介"];
     imageNames = @[@"89",@"96",@"97",@"98",@"114"];
-    controllerNames = @[@"",@"",@"MineSettingViewController",@"FeedBackViewController",@"AboutUSViewController"];
+    controllerNames = @[@"",@"",@"",@"CommentListViewController",@"EditHouseViewController"];
     
 }
 -(void)setcontentView{
 
-    self.view.backgroundColor =       UIColorFromRGB(0xFFFFFF);
+    
     [self.view addSubview:self.collectionView];
     
     [self.collectionView registerClass:[YLWorkCollectionViewCell class] forCellWithReuseIdentifier:@"YLWorkCollectionViewCell"];
-    [self.collectionView registerClass:[HomeAdminHeardView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HomeAdminHeardView"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"HomeAdminHeardView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HomeAdminHeardView"];
     
 }
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -81,25 +91,23 @@
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     
-    return CGSizeMake([UIScreen mainScreen].bounds.size.width, 30);
+    return CGSizeMake([UIScreen mainScreen].bounds.size.width, 140);
 }
 
 #pragma mark - 头部或者尾部视图
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     
-    HomeAdminHeardView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HomeAdminHeardView" forIndexPath:indexPath];
-   
-    if (titles.count > indexPath.section)
-    {
-        
-//        YLRoleMenusModel *model  =  self.dataSource[indexPath.section];
-//        headerView.foldButton.hidden = model.showFoldButton;
-//        headerView.foldButton.selected = model.apps.count<5;
-//        headerView.model = model;
-        
-       
-    }
+    HomeAdminHeardView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HomeAdminHeardView" forIndexPath:indexPath];
+    [headerView.icon sd_setImageWithURL:[NSURL URLWithString:JGLSingle.userModel.logo] placeholderImage:[UIImage imageNamed:@""]];
+    headerView.title.text = TR_securityString(JGLSingle.userModel.company_name);
+    headerView.todayAmount.text =TR_securityString(day_income);
+    headerView.totalAmount.text =TR_securityString(total_income);
+    headerView.mouthAmount.text =TR_securityString(month_income);
+    headerView.totalOrder.text =TR_securityString(week_income);
+    headerView.todayOrder.text =TR_securityString(order_count);
+    
+ 
     return headerView;
 }
 
@@ -146,14 +154,34 @@
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.minimumLineSpacing = 0;
         [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-        _collectionView =  [[UICollectionView alloc] initWithFrame:CGRectMake(0, kNavigationHeight , kScreenWidth, kScreenWidth - kNavigationHeight) collectionViewLayout:flowLayout];
+        _collectionView =  [[UICollectionView alloc] initWithFrame:CGRectMake(0, kNavigationHeight , kScreenWidth, kScreenHeight - kNavigationHeight) collectionViewLayout:flowLayout];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.bounces = NO;
         _collectionView.userInteractionEnabled = YES;
-        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.backgroundColor = kGrayBgColor;
         _collectionView.showsVerticalScrollIndicator = NO;
     }
     return _collectionView;
 }
+- (void)requestIncomeData
+{
+    NSString *action = [NSString stringWithFormat:@"%s%@", kUserUrl, @"income"];
+    NSDictionary *paramDic = @{@"seller_id":JGLSingle.userModel.seller_id,@"auth_token":JGLSingle.userModel.auth_token};
+    
+    [kDataRequestManager POST2RequestWithUrl:action parameters:paramDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+        if (NetWork_Success) {
+            self->day_income = [NSString stringWithFormat:@"%d",[jsonDic[@"data"][@"day_income"] intValue]];;
+            self->total_income = [NSString stringWithFormat:@"%d",[jsonDic[@"data"][@"total_income"] intValue]];;
+            self->month_income = [NSString stringWithFormat:@"%d",[jsonDic[@"data"][@"month_income"] intValue]];;
+            self->week_income = [NSString stringWithFormat:@"%d",[jsonDic[@"data"][@"week_income"] intValue]];;
+            self->order_count = [NSString stringWithFormat:@"%d",[jsonDic[@"data"][@"order_count"] intValue]];;
+            [self.collectionView reloadData];
+        }
+    } failed:^(NSError * _Nonnull error) {
+        
+    }];
+    
+}
+
 @end
