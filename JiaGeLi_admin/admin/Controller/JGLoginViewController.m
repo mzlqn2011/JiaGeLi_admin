@@ -111,12 +111,11 @@
         return;
     }
     self.userName = self.phoneTextField.text;
-    
 
-        [self requsetLogin];
-
+    [self requsetLogin];
 
 }
+
 - (IBAction)registerBtnClick:(UIButton *)sender {
     if (self.registerPhoneTextField.text.length == 0) {
         [SVProgressHUD displayInfoWithStatus:@"请输入电话号码"];
