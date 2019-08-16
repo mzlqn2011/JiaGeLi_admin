@@ -16,17 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self requestData];
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)requestData
+{
+    NSString *authToken = @"90c58ac60dccbf4b1810d947e1407488";
+    NSString *url = [NSString stringWithFormat:@"%s%@", kUserUrl, @"orderList"];
+    NSMutableDictionary *paramDic = [NSMutableDictionary dictionary];
+    [paramDic setObject:@"1" forKey:@"seller_id"]; //JGLSingle.userModel.seller_id
+    [paramDic setObject:authToken forKey:@"auth_token"];
+    [paramDic setObject:@(100) forKey:@"status"];
+    
+    [kDataRequestManager POST2RequestWithUrl:url parameters:paramDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+        if ([jsonDic isKindOfClass:kNSDictionaryClass]) {
+            NSDictionary *dataDic = jsonDic[@"data"];
+        }
+            
+    } failed:^(NSError * _Nonnull error) {
+        
+    }];
 }
-*/
+
 
 @end

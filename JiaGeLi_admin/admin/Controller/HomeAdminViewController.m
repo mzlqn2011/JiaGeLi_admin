@@ -40,7 +40,7 @@
     
     titles = @[@"发布商品",@"商品管理",@"订单管理",@"评论管理",@"房屋中介"];
     imageNames = @[@"89",@"96",@"97",@"98",@"114"];
-    controllerNames = @[@"DistributeGoodsVC",@"",@"",@"CommentListViewController",@"EditHouseViewController"];
+    controllerNames = @[@"DistributeGoodsVC",@"GoodsManageVC",@"OrderManageVC",@"CommentListViewController",@"EditHouseViewController"];
     
 }
 -(void)setcontentView{
