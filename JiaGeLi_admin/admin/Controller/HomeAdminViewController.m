@@ -39,8 +39,11 @@
 - (void)initData{
     
     titles = @[@"发布商品",@"商品管理",@"订单管理",@"评论管理",@"房屋中介"];
+
     imageNames = @[@"96",@"97",@"98",@"89",@"114"];
-    controllerNames = @[@"",@"",@"",@"CommentListViewController",@"EditHouseViewController"];
+
+    controllerNames = @[@"DistributeGoodsVC",@"GoodsManageVC",@"OrderManageVC",@"CommentListViewController",@"EditHouseViewController"];
+
     
 }
 -(void)setcontentView{
@@ -133,14 +136,14 @@
     if (titles.count > indexPath.row)
     {
         cell.imageView.image = [UIImage imageNamed:imageNames[indexPath.row]];
-        cell.titleLabel.text = titles[indexPath.row];;
+        cell.titleLabel.text = titles[indexPath.row];
     }
     return cell;
 }
 
 // UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+{	
   if (controllerNames.count>indexPath.row) {
       Class class = NSClassFromString(controllerNames[indexPath.row]);
       
@@ -148,6 +151,7 @@
       [self.navigationController pushViewController:vc animated:YES];
   }
 }
+
 - (UICollectionView *)collectionView{
     if (!_collectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -164,6 +168,7 @@
     }
     return _collectionView;
 }
+
 - (void)requestIncomeData
 {
     NSString *action = [NSString stringWithFormat:@"%s%@", kUserUrl, @"income"];
