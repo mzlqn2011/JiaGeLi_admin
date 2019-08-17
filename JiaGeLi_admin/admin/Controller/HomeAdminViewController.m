@@ -39,7 +39,7 @@
 - (void)initData{
     
     titles = @[@"发布商品",@"商品管理",@"订单管理",@"评论管理",@"房屋中介"];
-    imageNames = @[@"89",@"96",@"97",@"98",@"114"];
+    imageNames = @[@"96",@"97",@"98",@"89",@"114"];
     controllerNames = @[@"",@"",@"",@"CommentListViewController",@"EditHouseViewController"];
     
 }
@@ -99,7 +99,7 @@
 {
     
     HomeAdminHeardView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HomeAdminHeardView" forIndexPath:indexPath];
-    [headerView.icon sd_setImageWithURL:[NSURL URLWithString:JGLSingle.userModel.logo] placeholderImage:[UIImage imageNamed:@""]];
+    [headerView.icon sd_setImageWithURL:[NSURL URLWithString:JGLSingle.userModel.logo] placeholderImage:[UIImage imageNamed:@"defult"]];
     headerView.title.text = TR_securityString(JGLSingle.userModel.company_name);
     headerView.todayAmount.text =TR_securityString(day_income);
     headerView.totalAmount.text =TR_securityString(total_income);

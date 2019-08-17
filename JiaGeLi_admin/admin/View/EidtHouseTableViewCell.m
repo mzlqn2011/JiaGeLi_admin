@@ -26,8 +26,9 @@
      NSArray * texts = @[@"基本信息",@"选择标签",@"小区信息",@"房源描述",@"个人信息"];
     NSArray * showPopArr = @[@"楼层"];
     __block CGFloat y = 0;
-    [titles enumerateObjectsUsingBlock:^(NSArray* arr, NSUInteger idx, BOOL * _Nonnull stop) {
-       
+//    [titles enumerateObjectsUsingBlock:^(NSArray* arr, NSUInteger idx, BOOL * _Nonnull stop) {
+        for (int idx = 0; idx<titles.count; idx++) {
+            NSArray* arr = titles[idx];
             UIView * line = [[UIView alloc]initWithFrame:CGRectMake(0, y, kScreenWidth, 10)];
             line.backgroundColor = UIColorFromRGB(0xF6F6F6);
             [self.contentView addSubview:line];
@@ -44,8 +45,12 @@
             [self.contentView addSubview:v];
             y = CGRectGetMaxY(v.frame);
       if (idx == 1) {
+         
+          self.attributeV1.frame = CGRectMake(0, y, kScreenWidth, CGRectGetHeight(self.attributeV1.frame));
           [self.contentView addSubview:self.attributeV1];
+
             y = CGRectGetMaxY(self.attributeV1.frame);
+           continue;
       }
         NSInteger tagIndex = 10*idx;
         for (int i = 0; i<arr.count; i++) {
@@ -65,7 +70,8 @@
             y += 50;
         }
         
-    }];
+    }
+//    ];
     [self channelRACTF];
 }
 - (AttributeView *)attributeV1{
@@ -75,7 +81,7 @@
     model.normalBackgroundColor =UIColorFromRGB(0xF6F6F6);
     model.selectedBackgroundColor =UIColorFromRGB(0x3BA8FF);
     model.attributeViewY = 0;
-    _attributeV1 = [AttributeView  attributeViewWithButton:model attributeTexts:self.attributeArray viewWidth:kScreenWidth-40];
+    _attributeV1 = [AttributeView  attributeViewWithButton:model attributeTexts:self.attributeArray viewWidth:kScreenWidth];
     return _attributeV1;
 }
 
@@ -136,7 +142,6 @@
         case 24:
             self.jzlx = tf;
             break;
-     
         case 30:
             self.msxq = tf;
             break;

@@ -14,6 +14,7 @@
 		04CA0B4D23029F5E0054C6C8 /* CNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4623029F5D0054C6C8 /* CNavigationViewController.m */; };
 		04CA0B4E23029F5E0054C6C8 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4923029F5E0054C6C8 /* BaseModel.m */; };
 		04CA0B4F23029F5E0054C6C8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B4A23029F5E0054C6C8 /* BaseViewController.m */; };
+		09128BDB2307D00C00D68EC2 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09128BDA2307D00C00D68EC2 /* CommentModel.m */; };
 		0935B71E2303ABEF0080315F /* CheckCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B70A2303ABEF0080315F /* CheckCodeViewController.m */; };
 		0935B71F2303ABEF0080315F /* EditHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B70B2303ABEF0080315F /* EditHouseViewController.m */; };
 		0935B7212303ABEF0080315F /* CheckCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */; };
@@ -88,6 +89,8 @@
 		04CA0B4923029F5E0054C6C8 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		04CA0B4A23029F5E0054C6C8 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		04CA0B4B23029F5E0054C6C8 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		09128BD92307D00C00D68EC2 /* CommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		09128BDA2307D00C00D68EC2 /* CommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
 		0935B70A2303ABEF0080315F /* CheckCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckCodeViewController.m; sourceTree = "<group>"; };
 		0935B70B2303ABEF0080315F /* EditHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditHouseViewController.m; sourceTree = "<group>"; };
 		0935B70D2303ABEF0080315F /* CheckCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckCodeViewController.xib; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				0935B72F2303AC320080315F /* LoginModel.m */,
 				0935B7312303AC330080315F /* YLBaseModel.h */,
 				0935B72E2303AC320080315F /* YLBaseModel.m */,
+				09128BD92307D00C00D68EC2 /* CommentModel.h */,
+				09128BDA2307D00C00D68EC2 /* CommentModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -555,6 +560,7 @@
 				0935B7392303AC920080315F /* YLWorkCollectionViewCell.m in Sources */,
 				0935B75423043D6B0080315F /* NSMutableDictionary+Extension.m in Sources */,
 				0935B75223043D6B0080315F /* UIButton+SYDFixMultiClick.m in Sources */,
+				09128BDB2307D00C00D68EC2 /* CommentModel.m in Sources */,
 				0935B7242303ABEF0080315F /* HomeAdminHeardView.m in Sources */,
 				0935B71E2303ABEF0080315F /* CheckCodeViewController.m in Sources */,
 				0935B73C2303ACAE0080315F /* AttributeView.m in Sources */,

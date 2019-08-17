@@ -10,6 +10,7 @@
 #import "CommentListViewController.h"
 #import "CommentTableViewCell.h"
 #import "SHJPagesModel.h"
+#import "CommentModel.h"
 @interface CommentListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *dataSource;
@@ -24,6 +25,7 @@
     [super viewDidLoad];
     self.title = @"评价管理";
      [self setcontentView];
+     [self loadListData];
 }
 -(void)setcontentView{
     
@@ -69,7 +71,7 @@
     if (_pageModel == nil) {
         _pageModel = [[SHJPagesModel alloc] init];
         _pageModel.page = 1;
-        _pageModel.page = 10;
+        _pageModel.rows = 10;
     }
     return _pageModel;
 }
@@ -129,12 +131,13 @@
 - (void)loadListData
 {
     NSString *action = [NSString stringWithFormat:@"%s%@", kUserUrl, @"commentList"];
-    NSDictionary *paramDic = @{@"seller_id":JGLSingle.userModel.seller_id,@"auth_token":JGLSingle.userModel.auth_token,@"page":@(self.pageModel.page),@"page":@(self.pageModel.rows)};
+    NSDictionary *paramDic = @{@"seller_id":JGLSingle.userModel.seller_id,@"auth_token":JGLSingle.userModel.auth_token,@"page":@(self.pageModel.page),@"num":@(self.pageModel.rows)};
     
     [kDataRequestManager POST2RequestWithUrl:action parameters:paramDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
         if (NetData_Eexist) {
+            self.totalCount = [jsonDic[NetWork_Data][@""] integerValue];
              NSArray *dataArr = [Common getDicArrayFromArrayDic:jsonDic[NetWork_Data]];
             if (dataArr.count == 0) {
                 if (self.dataSource.count == 0) {
@@ -144,8 +147,11 @@
                     [self.tableView.mj_footer endRefreshingWithNoMoreData];
                 }
             }else {
-                [self.dataSource addObjectsFromArray:dataArr];
-               
+                
+                    for (NSDictionary *dic in dataArr) {
+                        CommentModel *model = [[CommentModel alloc] initWithDictionay:dic];
+                        [self.dataSource addObject:model];
+                  }
             }
         }
         [self.tableView reloadData];

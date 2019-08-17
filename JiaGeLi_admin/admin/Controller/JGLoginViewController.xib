@@ -38,7 +38,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="inO-vy-Pe7">
+                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-商户" translatesAutoresizingMaskIntoConstraints="NO" id="inO-vy-Pe7">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="255" id="5Qt-u3-5Fk"/>
@@ -460,7 +460,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bg" width="375" height="255"/>
+        <image name="bg-商户" width="375" height="255"/>
         <image name="left_white" width="25" height="25"/>
     </resources>
 </document>
