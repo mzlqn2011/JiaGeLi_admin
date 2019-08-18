@@ -7,6 +7,7 @@
 //
 
 #import "EidtHouseTableViewCell.h"
+#import "EditImageView.h"
 #import "EditTFView.h"
 @interface EidtHouseTableViewCell ()
 @property(nonatomic,strong)NSMutableArray *attributeArray;
@@ -22,12 +23,13 @@
 
 - (void)initUI {
     self.attributeArray = @[@"满两年",@"电梯房",@"有车位",@"精装修"].mutableCopy;
-    NSArray * titles = @[@[@"小区名称",@"门牌号",@"期望售价",@"户型",@"朝向",@"面积",@"楼层",@"房屋类型",@"产权"],@[@"满两年",@"电梯房",@"有车位",@"精装修"],@[@"开发商",@"绿化率",@"年代",@"容积率",@"建筑类型"],@[@"描述详情"],@[@"称呼",@"联系方式"]];
+    NSArray * titles = @[@[@"标题",@"小区地址",@"门牌号",@"期望售价",@"上传照片",@"户型",@"朝向",@"面积",@"楼层",@"房屋类型",@"产权"],@[@"满两年",@"电梯房",@"有车位",@"精装修"],@[@"开发商",@"绿化率",@"年代",@"容积率",@"建筑类型"],@[@"描述详情"],@[@"称呼",@"联系方式"]];
      NSArray * texts = @[@"基本信息",@"选择标签",@"小区信息",@"房源描述",@"个人信息"];
-    NSArray * showPopArr = @[@"楼层"];
+//    NSArray * showPopArr = @[@"楼层"];
     __block CGFloat y = 0;
 //    [titles enumerateObjectsUsingBlock:^(NSArray* arr, NSUInteger idx, BOOL * _Nonnull stop) {
         for (int idx = 0; idx<titles.count; idx++) {
+            NSInteger tagIndex = 10*idx;
             NSArray* arr = titles[idx];
             UIView * line = [[UIView alloc]initWithFrame:CGRectMake(0, y, kScreenWidth, 10)];
             line.backgroundColor = UIColorFromRGB(0xF6F6F6);
@@ -45,21 +47,31 @@
             [self.contentView addSubview:v];
             y = CGRectGetMaxY(v.frame);
       if (idx == 1) {
-         
-          self.attributeV1.frame = CGRectMake(0, y, kScreenWidth, CGRectGetHeight(self.attributeV1.frame));
-          [self.contentView addSubview:self.attributeV1];
+          UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, y, kScreenWidth, CGRectGetHeight(self.attributeV1.frame))];;
+          [self.contentView addSubview:view];
+          [view addSubview:self.attributeV1];
 
-            y = CGRectGetMaxY(self.attributeV1.frame);
+            y = CGRectGetMaxY(view.frame);
            continue;
-      }
-        NSInteger tagIndex = 10*idx;
+      }else{
+        
         for (int i = 0; i<arr.count; i++) {
             NSString * title = arr[i];
+            if ([title isEqualToString:@"上传照片"]) {
+                EditImageView * img = [EditImageView editImageViewwWithOwnNib];
+                 [self.contentView addSubview:img];
+                [img mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.equalTo(self.contentView.mas_top).offset(y);
+                    make.left.right.equalTo(self.contentView);
+                    make.height.equalTo(@50);
+                }];
+                
+            }else{
             EditTFView * v = [EditTFView editTFViewWithOwnNib];
             //            EditTFView * v = [[EditTFView alloc]initWithFrame:CGRectMake(0, y, kScreenWidth, 50)];
             v.title.text = title;
             v.textF.tag = tagIndex +i;
-            v.showPopView = [showPopArr containsObject:title];
+            
             [self.contentView addSubview:v];
             [self bundleTF:v.textF tag:v.textF.tag];
             [v mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -67,9 +79,10 @@
                 make.left.right.equalTo(self.contentView);
                 make.height.equalTo(@50);
             }];
+            }
             y += 50;
         }
-        
+      }
     }
 //    ];
     [self channelRACTF];
@@ -88,38 +101,38 @@
 - (void)bundleTF:(UITextField *)tf tag:(NSInteger)tag{
     switch (tag) {
         case 0:
-            self.xqmc = tf;
+            self.bt  = tf;
             break;
         case 1:
-            self.mph = tf;
+            self.xqdz = tf;
             break;
         case 2:
-            self.qwsj = tf;
+            self.mph = tf;
             break;
         case 3:
-            self.hx = tf;
+            self.qwsj = tf;
             break;
         case 4:
-            self.cx = tf;
+            self.sczp = tf;
             break;
         case 5:
-            self.mj = tf;
+            self.hx = tf;
             break;
         case 6:
-            self.lc = tf;
+            self.cx = tf;
             break;
         case 7:
-            self.fwlx = tf;
+            self.mj = tf;
             break;
         case 8:
+            self.lc = tf;
+            break;
+        case 10:
+            self.fwlx = tf;
+            break;
+        case 11:
             self.cq = tf;
             break;
-//        case 10:
-//            self.nc = tf;
-//            break;
-//        case 11:
-//            self.xb = tf;
-//            break;
 //        case 12:
 //            self.sg = tf;
 //            break;

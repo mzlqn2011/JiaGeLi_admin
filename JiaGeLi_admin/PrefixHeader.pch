@@ -120,3 +120,4 @@ attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
 #import "MD5Encrypt.h"
 #import "NSMutableDictionary+Extension.h"
 #import "JGLCacheSingleton.h"
+#import "UIView+Extension.h"

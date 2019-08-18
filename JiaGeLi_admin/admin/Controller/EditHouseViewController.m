@@ -74,7 +74,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 836;
+    return 1300;
 }
 
 
@@ -90,48 +90,38 @@
     
     self.cell = [[EidtHouseTableViewCell  alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 836)];
     //NSArray * showPopArr = @[@"月薪",@"性别",@"血型",@"属相",@"学历",@"生日"];
-    [self.cell.lc jk_addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
-        RMPickerView * pickerV = [RMPickerView pickerWithOwnNib];
-//        pickerV.pickerArray =  self.model.salaryArray;
-        kWeakSelf
-        pickerV.doneBlock =  ^(NSString * str, NSUInteger index){
-            
-            wSelf.cell.lc.text = str;
-            
-            return YES;
-        };
-        [pickerV show];
-    }];
+
    
     self.cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return self.cell;
 }
 - (void)postAddHouseInfo
 {
-    if(self.cell.xqmc.text.length == 0||self.cell.mph.text.length == 0||self.cell.qwsj.text.length == 0||self.cell.hx.text.length == 0||self.cell.cx.text.length == 0||self.cell.mj.text.length == 0||self.cell.lc.text.length == 0||self.cell.fwlx.text.length == 0||self.cell.cq.text.length == 0||self.cell.kfs.text.length == 0||self.cell.lhl.text.length == 0||self.cell.nd.text.length == 0||self.cell.rjl.text.length == 0||self.cell.jzlx.text.length == 0||self.cell.msxq.text.length == 0||self.cell.ch.text.length == 0||self.cell.lxfs.text.length == 0){
+    if(self.cell.bt.text.length == 0||self.cell.xqdz.text.length == 0||self.cell.mph.text.length == 0||self.cell.qwsj.text.length == 0||self.cell.hx.text.length == 0||self.cell.cx.text.length == 0||self.cell.mj.text.length == 0||self.cell.lc.text.length == 0||self.cell.fwlx.text.length == 0||self.cell.cq.text.length == 0||self.cell.kfs.text.length == 0||self.cell.lhl.text.length == 0||self.cell.nd.text.length == 0||self.cell.rjl.text.length == 0||self.cell.jzlx.text.length == 0||self.cell.msxq.text.length == 0||self.cell.ch.text.length == 0||self.cell.lxfs.text.length == 0){
         [SVProgressHUD displayInfoWithStatus:@"请填写完整的卖房信息"];
         return;
     }
     NSString *action = [NSString stringWithFormat:@"%s%@", kServiceUrl, @"houseTradeAdd"];
-    NSDictionary *paramDic = @{@"user_id":JGLSingle.userModel.seller_id,
-                               @"name":JGLSingle.userModel.auth_token,
-                               @"birth":JGLSingle.userModel.auth_token,
-                               @"sex":JGLSingle.userModel.auth_token,
-                               @"height":JGLSingle.userModel.auth_token,
-                               @"qualification":JGLSingle.userModel.auth_token,
-                               @"salary":JGLSingle.userModel.auth_token,
-                               @"hobby":JGLSingle.userModel.auth_token,
-                               @"sx":JGLSingle.userModel.auth_token,
-                               @"constellation":JGLSingle.userModel.auth_token,
-                               @"marriage_status":JGLSingle.userModel.auth_token,
-                               @"tel":JGLSingle.userModel.auth_token,
-                               @"occupation":JGLSingle.userModel.auth_token,
-                               @"addr":JGLSingle.userModel.auth_token,
-                               @"native_place":JGLSingle.userModel.auth_token,
-                               @"blood":JGLSingle.userModel.auth_token,
-                               @"more_request":JGLSingle.userModel.auth_token,
-                               @"head_photo":JGLSingle.userModel.auth_token,
-                               @"photos":JGLSingle.userModel.auth_token,
+    NSDictionary *paramDic = @{@"title":self.cell.bt.text,
+                               @"village_name":self.cell.xqdz.text,
+                               @"house_name":self.cell.mph.text,
+                               @"photos":self.cell.hx.text,
+                               @"pric":self.cell.qwsj.text,
+                               @"type":self.cell.hx.text,
+                               @"size":self.cell.mj.text,
+                               @"direction":self.cell.cx.text,
+                               @"floor":self.cell.lc.text,
+                               @"house_type":self.cell.fwlx.text,
+                               @"property":self.cell.cq.text,
+                               @"developer":self.cell.kfs.text,
+                               @"green_rate":self.cell.lhl.text,
+                               @"building_type":self.cell.jzlx.text,
+                               @"build_time":self.cell.nd.text,
+                               @"size_rate":self.cell.rjl.text,
+                               @"descri":self.cell.msxq.text,
+                               @"name":self.cell.ch.text,
+                               @"tel":self.cell.lxfs.text,
+                               @"location":self.cell.xqdz.text,
                                };
     
     [kDataRequestManager POST2RequestWithUrl:action parameters:paramDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
