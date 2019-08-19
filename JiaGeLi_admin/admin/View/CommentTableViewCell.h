@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CommentModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CommentTableViewCell : UITableViewCell
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *level;
 @property (weak, nonatomic) IBOutlet UILabel *comment;
 @property (weak, nonatomic) IBOutlet UILabel *time;
-
+@property (strong, nonatomic)CommentModel * model;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -43,7 +43,7 @@
                         <constraint firstAttribute="width" constant="40" id="trN-sK-LK2"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" image="small_arrowup">
+                    <state key="normal">
                         <color key="titleColor" red="1" green="0.44705882349999998" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
@@ -68,7 +68,4 @@
             <point key="canvasLocation" x="64" y="-130"/>
         </view>
     </objects>
-    <resources>
-        <image name="small_arrowup" width="16" height="16"/>
-    </resources>
 </document>

@@ -33,7 +33,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"CommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"CommentTableViewCell"];
     // 下拉刷新
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        self.pageModel.page = 1;
+        self.pageModel.page = 0;
         [self.dataSource removeAllObjects];
         [self loadListData];
     }];
@@ -53,7 +53,7 @@
         _tableView =  [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationHeight , kScreenWidth, kScreenHeight - kNavigationHeight) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.bounces = NO;
+        _tableView.bounces = YES;
         _tableView.backgroundColor = kGrayBgColor;
         _tableView.tableFooterView = [[UIView alloc] init];
         _tableView.separatorInset = UIEdgeInsetsMake(0, 20, 0, 20);
@@ -70,7 +70,7 @@
 - (SHJPagesModel *)pageModel {
     if (_pageModel == nil) {
         _pageModel = [[SHJPagesModel alloc] init];
-        _pageModel.page = 1;
+        _pageModel.page = 0;
         _pageModel.rows = 10;
     }
     return _pageModel;
@@ -100,7 +100,7 @@
     
     CommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommentTableViewCell"];
     if (_dataSource.count> indexPath.row) {
-//        cell.model = _dataSource[indexPath.row];;
+        cell.model = _dataSource[indexPath.row];;
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -115,9 +115,9 @@
     UILabel * b = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 80, 20)];
     b.text = @"全部评价";
     [v addSubview:b];
-    self.count = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 80, 20)];
-    self.count.text = [NSString stringWithFormat:@"(%ld条)",(long)self.totalCount];
-    [v addSubview:b];
+    self.count = [[UILabel alloc]initWithFrame:CGRectMake(100, 10, 80, 20)];
+     self.count.text = [NSString stringWithFormat:@"(%ld条)",(long)self.totalCount];
+    [v addSubview:self.count];
     return v;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -138,6 +138,7 @@
         [self.tableView.mj_footer endRefreshing];
         if (NetData_Eexist) {
             self.totalCount = [jsonDic[NetWork_Data][@""] integerValue];
+
              NSArray *dataArr = [Common getDicArrayFromArrayDic:jsonDic[NetWork_Data]];
             if (dataArr.count == 0) {
                 if (self.dataSource.count == 0) {

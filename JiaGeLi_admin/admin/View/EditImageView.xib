@@ -25,8 +25,17 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/6张" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUG-jg-koO">
+                    <rect key="frame" x="364" y="21.5" width="40" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="GvC-te-6Sn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gfn-gT-5Np" customClass="SelectImageV">
-                    <rect key="frame" x="118" y="0.0" width="281" height="60"/>
+                    <rect key="frame" x="118" y="0.0" width="236" height="60"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
@@ -35,14 +44,18 @@
                 <constraint firstItem="Gfn-gT-5Np" firstAttribute="leading" secondItem="ycZ-DA-Pct" secondAttribute="trailing" constant="30" id="7Mp-G5-lY8"/>
                 <constraint firstItem="Gfn-gT-5Np" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7pD-13-rsj"/>
                 <constraint firstItem="ycZ-DA-Pct" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="Nq3-1V-MOv"/>
+                <constraint firstAttribute="trailing" secondItem="MUG-jg-koO" secondAttribute="trailing" constant="10" id="YCV-gb-LSq"/>
+                <constraint firstItem="MUG-jg-koO" firstAttribute="leading" secondItem="Gfn-gT-5Np" secondAttribute="trailing" constant="10" id="bjb-j1-n4V"/>
                 <constraint firstAttribute="bottom" secondItem="Gfn-gT-5Np" secondAttribute="bottom" id="cdC-yo-0k5"/>
+                <constraint firstItem="MUG-jg-koO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="x2X-W4-x5H"/>
                 <constraint firstItem="ycZ-DA-Pct" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="x9H-6y-rIF"/>
-                <constraint firstAttribute="trailing" secondItem="Gfn-gT-5Np" secondAttribute="trailing" constant="15" id="xVD-kH-goJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="count" destination="MUG-jg-koO" id="PDJ-fS-DTZ"/>
                 <outlet property="partImageSIV" destination="Gfn-gT-5Np" id="01h-XX-3Eg"/>
             </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="103.79464285714285"/>
         </view>
     </objects>
 </document>

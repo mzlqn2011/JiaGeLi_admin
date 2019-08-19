@@ -10,14 +10,16 @@
 #import "RACKVOChannel.h"
 #import "SaleHouseModel.h"
 #import "AttributeView.h"
+#import "EditImageView.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EidtHouseTableViewCell : UITableViewCell
 @property (weak, nonatomic) UITextField *bt;//标题
 @property (weak, nonatomic) UITextField *xqdz;//小区地址
+@property (weak, nonatomic) UITextField *xqmc;//小区地址
 @property (weak, nonatomic) UITextField *mph;//门牌号
 @property (weak, nonatomic) UITextField *qwsj;//期望售价
-@property (weak, nonatomic) UITextField *sczp;//上传照片
+//@property (weak, nonatomic) UITextField *sczp;//上传照片
 @property (weak, nonatomic) UITextField *hx;//户型
 @property (weak, nonatomic) UITextField *cx;//朝向
 @property (weak, nonatomic) UITextField *mj;//面积
@@ -33,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) UITextField *ch;//称呼
 @property (weak, nonatomic) UITextField *lxfs;//联系方式
 @property (strong, nonatomic) AttributeView *attributeV1;//
+//@property (weak, nonatomic)  SelectImageV *partImageSIV;
+@property (strong, nonatomic)EditImageView * imageEditView;
 @end
 
 NS_ASSUME_NONNULL_END

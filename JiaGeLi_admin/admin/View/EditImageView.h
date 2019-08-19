@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EditImageView : UIView
 @property (weak, nonatomic) IBOutlet SelectImageV *partImageSIV;
+@property (weak, nonatomic) IBOutlet UILabel *count;
 - (instancetype)initWithFrame:(CGRect)frame;
 + (instancetype)editImageViewwWithOwnNib;
 @end

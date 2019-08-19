@@ -23,7 +23,7 @@
 
 - (void)initUI {
     self.attributeArray = @[@"满两年",@"电梯房",@"有车位",@"精装修"].mutableCopy;
-    NSArray * titles = @[@[@"标题",@"小区地址",@"门牌号",@"期望售价",@"上传照片",@"户型",@"朝向",@"面积",@"楼层",@"房屋类型",@"产权"],@[@"满两年",@"电梯房",@"有车位",@"精装修"],@[@"开发商",@"绿化率",@"年代",@"容积率",@"建筑类型"],@[@"描述详情"],@[@"称呼",@"联系方式"]];
+    NSArray * titles = @[@[@"标题",@"小区地址",@"小区名称",@"门牌号",@"期望售价",@"上传照片",@"户型",@"朝向",@"面积",@"楼层",@"房屋类型",@"产权"],@[@"满两年",@"电梯房",@"有车位",@"精装修"],@[@"开发商",@"绿化率",@"年代",@"容积率",@"建筑类型"],@[@"描述详情"],@[@"称呼",@"联系方式"]];
      NSArray * texts = @[@"基本信息",@"选择标签",@"小区信息",@"房源描述",@"个人信息"];
 //    NSArray * showPopArr = @[@"楼层"];
     __block CGFloat y = 0;
@@ -58,14 +58,17 @@
         for (int i = 0; i<arr.count; i++) {
             NSString * title = arr[i];
             if ([title isEqualToString:@"上传照片"]) {
-                EditImageView * img = [EditImageView editImageViewwWithOwnNib];
-                 [self.contentView addSubview:img];
-                [img mas_makeConstraints:^(MASConstraintMaker *make) {
+               self.imageEditView = [EditImageView editImageViewwWithOwnNib];
+                
+                 [self.contentView addSubview:self.imageEditView];
+                 
+
+                [_imageEditView mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.top.equalTo(self.contentView.mas_top).offset(y);
                     make.left.right.equalTo(self.contentView);
-                    make.height.equalTo(@50);
+                    make.height.equalTo(@55);
                 }];
-                
+                y += 55;
             }else{
             EditTFView * v = [EditTFView editTFViewWithOwnNib];
             //            EditTFView * v = [[EditTFView alloc]initWithFrame:CGRectMake(0, y, kScreenWidth, 50)];
@@ -79,8 +82,8 @@
                 make.left.right.equalTo(self.contentView);
                 make.height.equalTo(@50);
             }];
-            }
-            y += 50;
+                 y += 50;
+          }
         }
       }
     }
@@ -107,24 +110,27 @@
             self.xqdz = tf;
             break;
         case 2:
-            self.mph = tf;
+            self.xqmc = tf;
             break;
         case 3:
-            self.qwsj = tf;
+            self.mph = tf;
             break;
         case 4:
-            self.sczp = tf;
+            self.qwsj = tf;
             break;
-        case 5:
+//        case 5:
+//            self.sczp = tf;
+//            break;
+        case 6:
             self.hx = tf;
             break;
-        case 6:
+        case 7:
             self.cx = tf;
             break;
-        case 7:
+        case 8:
             self.mj = tf;
             break;
-        case 8:
+        case 9:
             self.lc = tf;
             break;
         case 10:
@@ -134,7 +140,7 @@
             self.cq = tf;
             break;
 //        case 12:
-//            self.sg = tf;
+//            self.cq = tf;
 //            break;
 //        case 13:
 //            self.hyzk = tf;

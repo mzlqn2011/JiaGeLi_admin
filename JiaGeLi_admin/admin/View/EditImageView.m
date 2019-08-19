@@ -10,14 +10,15 @@
 #import "EditImageView.h"
 
 @implementation EditImageView
-
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    
+}
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         
         self =[EditImageView editImageViewwWithOwnNib];
-        [self.partImageSIV isShowAddBtn:YES];
-        self.partImageSIV.isShowDelete = NO;
-        self.partImageSIV.collectionView.scrollEnabled = YES;
+        
         self.frame = frame;
         
     }
