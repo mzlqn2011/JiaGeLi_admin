@@ -180,7 +180,7 @@
                                @"village_name":self.cell.xqmc.text,
                                @"house_name":self.cell.mph.text,
                                @"photos":photos ,
-                               @"pric":self.cell.qwsj.text,
+                               @"price":self.cell.qwsj.text,
                                @"type":self.cell.hx.text,
                                @"size":self.cell.mj.text,
                                @"direction":self.cell.cx.text,
