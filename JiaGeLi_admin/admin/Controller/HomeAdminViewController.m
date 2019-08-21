@@ -102,7 +102,8 @@
 {
     
     HomeAdminHeardView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HomeAdminHeardView" forIndexPath:indexPath];
-    [headerView.icon sd_setImageWithURL:[NSURL URLWithString:JGLSingle.userModel.logo] placeholderImage:[UIImage imageNamed:@"defult"]];
+     NSString * imgs = [NSString stringWithFormat:@"%@%@",ImgRootUrl,JGLSingle.userModel.logo];
+    [headerView.icon sd_setImageWithURL:[NSURL URLWithString:imgs] placeholderImage:[UIImage imageNamed:@"defult"]];
     headerView.title.text = TR_securityString(JGLSingle.userModel.company_name);
     headerView.todayAmount.text =TR_securityString(day_income);
     headerView.totalAmount.text =TR_securityString(total_income);

@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 //#define kProductUrl "Product.php?action="
 #define kUserUrl    "Seller.php?action="
 #define kServiceUrl    "Service.php?action="
-
+#define ImgRootUrl  @"http://39.98.214.123/jzapp/"   //图片根路径
 #define NetWork_Success [jsonDic[@"code"]integerValue] == 0
 #define NetData_Eexist TR_isEexist(jsonDic[NetWork_Data])
 #define NetMsg_Eexist TR_isEexist(jsonDic[NetWork_Msg])
