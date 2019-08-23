@@ -60,7 +60,7 @@
 
 - (void)actionRegisterPhoneTextFieldDidChange{
     
-           if (_registerPhoneTextField.text.length >= 11) {
+        if (_registerPhoneTextField.text.length >= 11) {
             _registerPhoneTextField.text = [_registerPhoneTextField.text substringToIndex:11];
             self.codeCheckBtn.enabled = YES;
             
@@ -69,7 +69,7 @@
         }
     if (_registerCodeTextField.text.length >0 &&_registerPwdTextField.text.length >0&&_registerSurePwdTextField.text.length >0) {
         self.registerBtn.enabled = YES;
-        [self.registerBtn setBackgroundColor:kThemeColor];
+        [self.registerBtn setBackgroundColor:kBlueColor];
         
     }else{
         self.registerBtn.enabled = NO;
@@ -80,7 +80,7 @@
 - (void)actionPhoneTextFieldDidChange{
      if (_codeTextField.text.length >0 &&_phoneTextField.text.length >0) {
          self.loginBtn.enabled = YES;
-         [self.loginBtn setBackgroundColor:kThemeColor];
+         [self.loginBtn setBackgroundColor:kBlueColor];
          
      }else{
          self.loginBtn.enabled = NO;
@@ -158,11 +158,11 @@
     if (sender.tag == 1) {
        self.registerView.hidden = YES;
         self.loginView.hidden = NO;
-        self.line.backgroundColor = kThemeColor;
+        self.line.backgroundColor = kBlueColor;
         self.line2.backgroundColor = kWhiteColor;
 
     }else {
-        self.line2.backgroundColor = kThemeColor;
+        self.line2.backgroundColor = kBlueColor;
         self.line.backgroundColor = kWhiteColor;
         self.loginView.hidden = YES;
         self.registerView.hidden = NO;

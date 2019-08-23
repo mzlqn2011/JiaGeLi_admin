@@ -54,6 +54,7 @@ boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) \
 attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
 
 //MARK: 颜色
+#define kBlueColor      UIColorFromRGB(0x36A8F1)
 #define kThemeColor      UIColorFromRGB(0xFF8F3C)
 #define kLightGreenColor UIColorFromRGB(0xbadf96)
 #define kBlackFontColor  UIColorFromRGB(0x212121)
