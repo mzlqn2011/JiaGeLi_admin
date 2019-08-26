@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041D8F432313EAE900266579 /* l_product_manage.png in Resources */ = {isa = PBXBuildFile; fileRef = 041D8F3E2313EAE900266579 /* l_product_manage.png */; };
+		041D8F442313EAE900266579 /* l_comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 041D8F3F2313EAE900266579 /* l_comment.png */; };
+		041D8F452313EAE900266579 /* l_house.png in Resources */ = {isa = PBXBuildFile; fileRef = 041D8F402313EAE900266579 /* l_house.png */; };
+		041D8F462313EAE900266579 /* l_order.png in Resources */ = {isa = PBXBuildFile; fileRef = 041D8F412313EAE900266579 /* l_order.png */; };
+		041D8F472313EAE900266579 /* l_product_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 041D8F422313EAE900266579 /* l_product_add.png */; };
 		04CA0B12230273BB0054C6C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B11230273BB0054C6C8 /* AppDelegate.m */; };
 		04CA0B15230273BB0054C6C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA0B14230273BB0054C6C8 /* ViewController.m */; };
 		04CA0B1A230273BC0054C6C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CA0B19230273BC0054C6C8 /* Assets.xcassets */; };
@@ -115,6 +120,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041D8F3E2313EAE900266579 /* l_product_manage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = l_product_manage.png; sourceTree = "<group>"; };
+		041D8F3F2313EAE900266579 /* l_comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = l_comment.png; sourceTree = "<group>"; };
+		041D8F402313EAE900266579 /* l_house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = l_house.png; sourceTree = "<group>"; };
+		041D8F412313EAE900266579 /* l_order.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = l_order.png; sourceTree = "<group>"; };
+		041D8F422313EAE900266579 /* l_product_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = l_product_add.png; sourceTree = "<group>"; };
 		04CA0B0D230273BB0054C6C8 /* JiaGeLi_admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiaGeLi_admin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CA0B10230273BB0054C6C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04CA0B11230273BB0054C6C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -315,6 +325,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041D8F3C2313EACB00266579 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				041D8F3D2313EAD800266579 /* home_admin */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		041D8F3D2313EAD800266579 /* home_admin */ = {
+			isa = PBXGroup;
+			children = (
+				041D8F3F2313EAE900266579 /* l_comment.png */,
+				041D8F402313EAE900266579 /* l_house.png */,
+				041D8F412313EAE900266579 /* l_order.png */,
+				041D8F422313EAE900266579 /* l_product_add.png */,
+				041D8F3E2313EAE900266579 /* l_product_manage.png */,
+			);
+			path = home_admin;
+			sourceTree = "<group>";
+		};
 		04CA0B04230273BB0054C6C8 = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +368,7 @@
 		04CA0B0F230273BB0054C6C8 /* JiaGeLi_admin */ = {
 			isa = PBXGroup;
 			children = (
+				041D8F3C2313EACB00266579 /* image */,
 				0935B7082303ABEF0080315F /* admin */,
 				04CA0B4323029F190054C6C8 /* Common */,
 				04CA0B10230273BB0054C6C8 /* AppDelegate.h */,
@@ -774,17 +805,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041D8F462313EAE900266579 /* l_order.png in Resources */,
 				FA251E19230960E900A9926C /* README.mdown in Resources */,
+				041D8F432313EAE900266579 /* l_product_manage.png in Resources */,
 				096A6D672304F86C00A48D5B /* JGLFindPasswardViewController.xib in Resources */,
+				041D8F472313EAE900266579 /* l_product_add.png in Resources */,
 				0935B7262303ABEF0080315F /* HomeAdminHeardView.xib in Resources */,
 				FA251D4E23095C4700A9926C /* EditImageView.xib in Resources */,
 				096A6D632304ECE700A48D5B /* EditTFView.xib in Resources */,
 				FA251E04230960E900A9926C /* TZImagePickerController.bundle in Resources */,
+				041D8F442313EAE900266579 /* l_comment.png in Resources */,
 				0935B74523043D470080315F /* RMPickerView.xib in Resources */,
 				FA251E18230960E900A9926C /* LICENSE in Resources */,
 				04CA0B1A230273BC0054C6C8 /* Assets.xcassets in Resources */,
 				0935B72D2303AC230080315F /* JGLoginViewController.xib in Resources */,
 				0935B7212303ABEF0080315F /* CheckCodeViewController.xib in Resources */,
+				041D8F452313EAE900266579 /* l_house.png in Resources */,
 				0935B74123043D230080315F /* SaleHouseView.xib in Resources */,
 				0935B7272303ABEF0080315F /* CommentTableViewCell.xib in Resources */,
 			);

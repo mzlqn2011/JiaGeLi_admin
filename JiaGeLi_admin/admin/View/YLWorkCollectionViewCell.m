@@ -25,9 +25,9 @@
         
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.trailing.equalTo(self.contentView);
-            make.bottom.equalTo(self.contentView).offset(-10);
+            make.bottom.equalTo(self.contentView).offset(-8);
             make.height.mas_equalTo(20);
-        }];
+        }]; 
         
        
     }
@@ -58,7 +58,7 @@
 - (UIImageView*)imageView {
     if (!_imageView) {
         _imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _imageView.contentMode = UIViewContentModeScaleAspectFit;
+        _imageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _imageView;
 }

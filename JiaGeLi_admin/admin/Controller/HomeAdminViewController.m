@@ -40,7 +40,7 @@
     
     titles = @[@"发布商品",@"商品管理",@"订单管理",@"评论管理",@"房屋中介"];
 
-    imageNames = @[@"96",@"97",@"98",@"89",@"114"];
+    imageNames = @[@"l_product_add",@"l_product_manage",@"l_order",@"l_comment",@"l_house"];
 
     controllerNames = @[@"DistributeGoodsVC",@"GoodsManageVC",@"OrderManageVC",@"CommentListViewController",@"EditHouseViewController"];
 
