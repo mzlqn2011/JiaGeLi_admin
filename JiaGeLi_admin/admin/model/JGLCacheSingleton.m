@@ -7,7 +7,7 @@
 //
 
 #import "JGLCacheSingleton.h"
-#import "JGLoginViewController.h"
+#import "AdminLoginViewController.h"
 @implementation JGLCacheSingleton
 + (instancetype)shareInstance
 {
@@ -29,7 +29,7 @@
     if (JGLSingle.userModel) {
         return YES;
     }
-    [kWindow.rootViewController presentViewController:[[JGLoginViewController alloc]init] animated:YES completion:nil];
+    [kWindow.rootViewController presentViewController:[[AdminLoginViewController alloc]init] animated:YES completion:nil];
     return NO;
 }
 - (void)login:(LoginModel *)userModel{

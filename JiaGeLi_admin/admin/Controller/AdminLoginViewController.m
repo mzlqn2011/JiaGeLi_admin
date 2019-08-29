@@ -1,20 +1,20 @@
 //
-//  JGLoginViewController.m
-//  JiaGeLi
+//  AdminLoginViewController.m
+//  JiaGeLi_admin
 //
-//  Created by LTY on 2019/7/23.
-//  Copyright © 2019 apple. All rights reserved.
+//  Created by LTY on 2019/8/29.
+//  Copyright © 2019 mac. All rights reserved.
 //
 
-#import "JGLoginViewController.h"
+#import "AdminLoginViewController.h"
 #import "HomeAdminViewController.h"
 #import "CNavigationViewController.h"
 #import "UIButton+SYDFixMultiClick.h"
 #import "NSString+JKNormalRegex.h"
-#import "JGLFindPasswardViewController.h"
+#import "AdminFindPasswardViewController.h"
 #import "LoginModel.h"
 #import "TRClassHelper.h"
-@interface JGLoginViewController ()<UITextFieldDelegate>
+@interface AdminLoginViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *back;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;//手机号输入
 @property (weak, nonatomic) IBOutlet UITextField *codeTextField;//密码输入
@@ -36,7 +36,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *registerSurePwdTextField;
 @end
 
-@implementation JGLoginViewController
+@implementation AdminLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,20 +53,20 @@
     [self.phoneTextField addTarget:self action:@selector(actionPhoneTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
     [self.codeTextField addTarget:self action:@selector(actionPhoneTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
     [self.registerPhoneTextField addTarget:self action:@selector(actionRegisterPhoneTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
-     [self.registerCodeTextField addTarget:self action:@selector(actionRegisterPhoneTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
-     [self.registerPwdTextField addTarget:self action:@selector(actionRegisterPhoneTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
-     [self.registerSurePwdTextField addTarget:self action:@selector(actionRegisterPhoneTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
+    [self.registerCodeTextField addTarget:self action:@selector(actionRegisterPhoneTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
+    [self.registerPwdTextField addTarget:self action:@selector(actionRegisterPhoneTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
+    [self.registerSurePwdTextField addTarget:self action:@selector(actionRegisterPhoneTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void)actionRegisterPhoneTextFieldDidChange{
     
-        if (_registerPhoneTextField.text.length >= 11) {
-            _registerPhoneTextField.text = [_registerPhoneTextField.text substringToIndex:11];
-            self.codeCheckBtn.enabled = YES;
-            
-        }else{
-            self.codeCheckBtn.enabled = NO;
-        }
+    if (_registerPhoneTextField.text.length >= 11) {
+        _registerPhoneTextField.text = [_registerPhoneTextField.text substringToIndex:11];
+        self.codeCheckBtn.enabled = YES;
+        
+    }else{
+        self.codeCheckBtn.enabled = NO;
+    }
     if (_registerCodeTextField.text.length >0 &&_registerPwdTextField.text.length >0&&_registerSurePwdTextField.text.length >0) {
         self.registerBtn.enabled = YES;
         [self.registerBtn setBackgroundColor:kBlueColor];
@@ -75,21 +75,21 @@
         self.registerBtn.enabled = NO;
         [self.registerBtn setBackgroundColor:kDeflutGaryColor];
     }
-
+    
 }
 - (void)actionPhoneTextFieldDidChange{
-     if (_codeTextField.text.length >0 &&_phoneTextField.text.length >0) {
-         self.loginBtn.enabled = YES;
-         [self.loginBtn setBackgroundColor:kBlueColor];
-         
-     }else{
-         self.loginBtn.enabled = NO;
-         [self.loginBtn setBackgroundColor:kDeflutGaryColor];
-     }
+    if (_codeTextField.text.length >0 &&_phoneTextField.text.length >0) {
+        self.loginBtn.enabled = YES;
+        [self.loginBtn setBackgroundColor:kBlueColor];
+        
+    }else{
+        self.loginBtn.enabled = NO;
+        [self.loginBtn setBackgroundColor:kDeflutGaryColor];
+    }
     if (_phoneTextField.text.length >= 11) {
         _phoneTextField.text = [_phoneTextField.text substringToIndex:11];
     }
-   
+    
 }
 
 #pragma mark - 登录/注册按钮
@@ -111,9 +111,9 @@
         return;
     }
     self.userName = self.phoneTextField.text;
-
+    
     [self requsetLogin];
-
+    
 }
 
 - (IBAction)registerBtnClick:(UIButton *)sender {
@@ -134,12 +134,12 @@
         return;
     }
     if ([TRClassHelper checkCode:self.registerCodeTextField.text]) {
-      
+        
         [self requsetRegist];
     }
 }
 - (IBAction)forgotBtnClick:(UIButton *)sender {
-    JGLFindPasswardViewController * vc = [[JGLFindPasswardViewController alloc]init];
+    AdminFindPasswardViewController * vc = [[AdminFindPasswardViewController alloc]init];
     [self presentViewController:vc animated:YES completion:NULL];
 }
 - (IBAction)actionGetCode:(UIButton *)sender  {
@@ -150,23 +150,23 @@
     }else if ([self.registerPhoneTextField.text jk_isMobileNumberClassification] == NO){
         [SVProgressHUD displayInfoWithStatus:@"请输入正确的电话号码"];
     }else{
-         [self requestCheckPhone];//验证手机号码是否注册
-       
+        [self requestCheckPhone];//验证手机号码是否注册
+        
     }
 }
 - (IBAction)changeBtnClick:(UIButton *)sender {
     if (sender.tag == 1) {
-       self.registerView.hidden = YES;
+        self.registerView.hidden = YES;
         self.loginView.hidden = NO;
         self.line.backgroundColor = kBlueColor;
         self.line2.backgroundColor = kWhiteColor;
-
+        
     }else {
         self.line2.backgroundColor = kBlueColor;
         self.line.backgroundColor = kWhiteColor;
         self.loginView.hidden = YES;
         self.registerView.hidden = NO;
-
+        
     }
     self.topBarLogin.selected = NO;
     self.topBarRegister.selected = NO;
@@ -209,7 +209,7 @@
                 [self.registerPhoneTextField resignFirstResponder];
                 [self.registerCodeTextField becomeFirstResponder];
             });
-           
+            
         }else{
             [SVProgressHUD displayErrorWithStatus:NetWork_Msg];
         }
@@ -224,7 +224,7 @@
     //提交验证码
     if ([TRClassHelper checkCode:self.registerCodeTextField.text]) {
         self.userName = self.registerPhoneTextField.text;
-       
+        
         [self requsetLogin];
     }
 }
@@ -238,21 +238,21 @@
     [param trmSetObject:self.codeTextField.text forKey:@"password"];
     [[DataRequestManager sharedManager] login:param success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (NetWork_Success) {
-          LoginModel *loginModel = [LoginModel mj_objectWithKeyValues:jsonDic[NetWork_Data]];
-              [JGLSingle login:loginModel];
+            LoginModel *loginModel = [LoginModel mj_objectWithKeyValues:jsonDic[NetWork_Data]];
+            [JGLSingle login:loginModel];
             if(JGLSingle.userModel.safe_code){
                 NSString * s = [NSString stringWithFormat:@"%@+%@",JGLSingle.userModel.seller_id,JGLSingle.userModel.safe_code];
-
+                
                 JGLSingle.userModel.auth_token = [MD5Encrypt MD5ForLower32Bate:s];
             }else{
                 JGLSingle.userModel.auth_token = @"90c58ac60dccbf4b1810d947e1407488";
             }
-           
+            
             HomeAdminViewController *rootVc = [[HomeAdminViewController alloc] init];
             CNavigationViewController *navigationViewController = [[CNavigationViewController alloc] initWithRootViewController:rootVc];
             kWindow.rootViewController = navigationViewController;
         } else {
-              [SVProgressHUD displayInfoWithStatus:jsonDic[NetWork_Msg]];
+            [SVProgressHUD displayInfoWithStatus:jsonDic[NetWork_Msg]];
         }
     } failure:^(NSError * _Nonnull error) {
         

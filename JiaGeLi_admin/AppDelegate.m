@@ -21,7 +21,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    JGLoginViewController *rootVc = [[JGLoginViewController alloc] init];
+    AdminLoginViewController *rootVc = [[AdminLoginViewController alloc] init];
     self.window.rootViewController = rootVc;
     return YES;
 }

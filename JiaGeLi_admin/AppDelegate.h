@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JGLoginViewController.h"
+#import "AdminLoginViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

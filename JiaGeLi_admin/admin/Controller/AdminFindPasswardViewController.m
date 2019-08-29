@@ -1,29 +1,29 @@
 //
-//  JGLFindPasswardViewController.m
-//  JiaGeLi
+//  AdminFindPasswardViewController.m
+//  JiaGeLi_admin
 //
-//  Created by LTY on 2019/7/24.
-//  Copyright © 2019 apple. All rights reserved.
+//  Created by LTY on 2019/8/29.
+//  Copyright © 2019 mac. All rights reserved.
 //
 
-#import "JGLFindPasswardViewController.h"
+#import "AdminFindPasswardViewController.h"
 #import "UIButton+SYDFixMultiClick.h"
-@interface JGLFindPasswardViewController ()
+@interface AdminFindPasswardViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;//手机号输入
-@property (weak, nonatomic) IBOutlet UITextField *codeTextField;//密码输入
-@property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
+@property (weak, nonatomic) IBOutlet UITextField *codeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *pwdTextField;//密码输入
 @property (weak, nonatomic) IBOutlet UITextField *surePwdTextField;
 @property (weak, nonatomic) IBOutlet UIButton *codeCheckBtn;//获取验证码
-@property (weak, nonatomic) IBOutlet UIButton *sureBtn;//获取验证码
+@property (weak, nonatomic) IBOutlet UIButton *sureBtn;
 @end
 
-@implementation JGLFindPasswardViewController
+@implementation AdminFindPasswardViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.sureBtn.layer.cornerRadius = 24.5;
 }
+
 - (IBAction)backClick:(id)sender {
     if (self.presentingViewController) {
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -62,7 +62,7 @@
         [SVProgressHUD displayInfoWithStatus:@"请输入正确的电话号码"];
     }else{
         [self requestCheckPhone];//验证手机号码是否注册
-       
+        
     }
 }
 
@@ -96,7 +96,7 @@
             });
             
         }else{
-           
+            
             [SVProgressHUD displayErrorWithStatus:@"手机号未注册"];
         }
     } failure:^(NSError * _Nonnull error) {
@@ -126,19 +126,19 @@
 - (void)requestModifyPassword {
     NSMutableDictionary *paramterDic = [[NSMutableDictionary alloc]init];
     [paramterDic setObject:self.phoneTextField.text forKey:@"tel"];
-//    NSString *md5Psw = [NSString md5:self.phoneTextField.text];
-//    [paramterDic setObject:md5Psw forKey:@"password"];
+    //    NSString *md5Psw = [NSString md5:self.phoneTextField.text];
+    //    [paramterDic setObject:md5Psw forKey:@"password"];
     [paramterDic setObject:self.surePwdTextField.text forKey:@"password"];
     
     [[DataRequestManager sharedManager]requestChangePassword:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (NetWork_Success) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (self.findPasswardSuccess) {
-               self.findPasswardSuccess(paramterDic);
+                    self.findPasswardSuccess(paramterDic);
                 }
-            [SVProgressHUD displayErrorWithStatus:@"找回密码成功"];
-            [self backClick:nil];
-          });
+                [SVProgressHUD displayErrorWithStatus:@"找回密码成功"];
+                [self backClick:nil];
+            });
         } else {
             [SVProgressHUD displayErrorWithStatus:jsonDic[NetWork_Msg]];
         }
