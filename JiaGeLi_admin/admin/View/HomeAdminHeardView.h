@@ -18,6 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *mouthAmount;
 @property (weak, nonatomic) IBOutlet UILabel *totalOrder;
 @property (weak, nonatomic) IBOutlet UILabel *todayOrder;
+@property (weak, nonatomic) IBOutlet UIView *whiteView;
+@property (weak, nonatomic) IBOutlet UILabel *tixianLabel;
+@property (weak, nonatomic) IBOutlet UIButton *tixianButton;
+@property (weak, nonatomic) IBOutlet UILabel *daiTiXianL;
+@property (weak, nonatomic) IBOutlet UILabel *yiTiXianL;
 + (instancetype)homeAdminHeardViewWithOwnNib;
 - (instancetype)initWithFrame:(CGRect)frame;
 @end

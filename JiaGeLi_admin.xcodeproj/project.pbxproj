@@ -61,6 +61,8 @@
 		097B44962317AE730030DFAE /* AdminLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 097B44942317AE730030DFAE /* AdminLoginViewController.xib */; };
 		097B449A2317B4530030DFAE /* AdminFindPasswardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097B44982317B4530030DFAE /* AdminFindPasswardViewController.m */; };
 		097B449B2317B4530030DFAE /* AdminFindPasswardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 097B44992317B4530030DFAE /* AdminFindPasswardViewController.xib */; };
+		0999F6582325EB51004C1EB3 /* TiXianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0999F6562325EB51004C1EB3 /* TiXianViewController.m */; };
+		0999F6592325EB51004C1EB3 /* TiXianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0999F6572325EB51004C1EB3 /* TiXianViewController.xib */; };
 		4F9EFB6345D1E1ECDA3357F7 /* libPods-JiaGeLi_admin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06FBEADFC3C0828EC2735D /* libPods-JiaGeLi_admin.a */; };
 		FA251D4C23095C3900A9926C /* EditImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA251D4B23095C3900A9926C /* EditImageView.m */; };
 		FA251D4E23095C4700A9926C /* EditImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA251D4D23095C4700A9926C /* EditImageView.xib */; };
@@ -218,6 +220,9 @@
 		097B44972317B4530030DFAE /* AdminFindPasswardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdminFindPasswardViewController.h; sourceTree = "<group>"; };
 		097B44982317B4530030DFAE /* AdminFindPasswardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminFindPasswardViewController.m; sourceTree = "<group>"; };
 		097B44992317B4530030DFAE /* AdminFindPasswardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminFindPasswardViewController.xib; sourceTree = "<group>"; };
+		0999F6552325EB51004C1EB3 /* TiXianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TiXianViewController.h; sourceTree = "<group>"; };
+		0999F6562325EB51004C1EB3 /* TiXianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiXianViewController.m; sourceTree = "<group>"; };
+		0999F6572325EB51004C1EB3 /* TiXianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TiXianViewController.xib; sourceTree = "<group>"; };
 		0C06FBEADFC3C0828EC2735D /* libPods-JiaGeLi_admin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiaGeLi_admin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CFC1841021C2B7AB81671F0 /* Pods-JiaGeLi_admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaGeLi_admin.release.xcconfig"; path = "Target Support Files/Pods-JiaGeLi_admin/Pods-JiaGeLi_admin.release.xcconfig"; sourceTree = "<group>"; };
 		4E40C6DDC410E63072C9C3E7 /* Pods-JiaGeLi_admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaGeLi_admin.debug.xcconfig"; path = "Target Support Files/Pods-JiaGeLi_admin/Pods-JiaGeLi_admin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -469,6 +474,9 @@
 				097B44972317B4530030DFAE /* AdminFindPasswardViewController.h */,
 				097B44982317B4530030DFAE /* AdminFindPasswardViewController.m */,
 				097B44992317B4530030DFAE /* AdminFindPasswardViewController.xib */,
+				0999F6552325EB51004C1EB3 /* TiXianViewController.h */,
+				0999F6562325EB51004C1EB3 /* TiXianViewController.m */,
+				0999F6572325EB51004C1EB3 /* TiXianViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -816,6 +824,7 @@
 				FA251E04230960E900A9926C /* TZImagePickerController.bundle in Resources */,
 				097B449B2317B4530030DFAE /* AdminFindPasswardViewController.xib in Resources */,
 				041D8F442313EAE900266579 /* l_comment.png in Resources */,
+				0999F6592325EB51004C1EB3 /* TiXianViewController.xib in Resources */,
 				0935B74523043D470080315F /* RMPickerView.xib in Resources */,
 				FA251E18230960E900A9926C /* LICENSE in Resources */,
 				04CA0B1A230273BC0054C6C8 /* Assets.xcassets in Resources */,
@@ -942,6 +951,7 @@
 				0935B74023043D230080315F /* SaleHouseView.m in Sources */,
 				FA251D4C23095C3900A9926C /* EditImageView.m in Sources */,
 				0935B7322303AC330080315F /* YLBaseModel.m in Sources */,
+				0999F6582325EB51004C1EB3 /* TiXianViewController.m in Sources */,
 				0935B75323043D6B0080315F /* SVProgressHUD+YM.m in Sources */,
 				0935B7232303ABEF0080315F /* CommentListViewController.m in Sources */,
 				FA251E03230960E900A9926C /* TZPhotoPreviewController.m in Sources */,

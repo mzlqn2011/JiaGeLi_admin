@@ -29,6 +29,7 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     _icon.layer.cornerRadius = 3;
-    
+    _whiteView.layer.cornerRadius = 10;
+    [_tixianButton drawBorderWithColor:kBlueColor radius:15];
 }
 @end

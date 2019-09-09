@@ -247,6 +247,7 @@
                 <constraint firstItem="p3O-iC-mpH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qz8-X2-8mo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-329" y="524"/>
         </view>
     </objects>
     <resources>

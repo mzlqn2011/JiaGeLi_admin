@@ -10,6 +10,7 @@
 #import "YLWorkCollectionViewCell.h"
 #import "CommentListViewController.h"
 #import "EditHouseViewController.h"
+#import "TiXianViewController.h"
 #import "HomeAdminHeardView.h"
 @interface HomeAdminViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 //@property (nonatomic, weak) HomeAdminHeardView * heardAdminView;
@@ -94,7 +95,7 @@
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     
-    return CGSizeMake([UIScreen mainScreen].bounds.size.width, 140);
+    return CGSizeMake([UIScreen mainScreen].bounds.size.width, 240);
 }
 
 #pragma mark - 头部或者尾部视图
@@ -104,6 +105,10 @@
     HomeAdminHeardView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HomeAdminHeardView" forIndexPath:indexPath];
      NSString * imgs = [NSString stringWithFormat:@"%@%@",ImgRootUrl,JGLSingle.userModel.logo];
     [headerView.icon sd_setImageWithURL:[NSURL URLWithString:imgs] placeholderImage:[UIImage imageNamed:@"defult"]];
+    [headerView.tixianButton jk_addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+        TiXianViewController * vc = [[TiXianViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
     headerView.title.text = TR_securityString(JGLSingle.userModel.company_name);
     headerView.todayAmount.text =TR_securityString(day_income);
     headerView.totalAmount.text =TR_securityString(total_income);
