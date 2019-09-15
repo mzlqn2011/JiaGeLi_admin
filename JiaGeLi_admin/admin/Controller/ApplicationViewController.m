@@ -16,7 +16,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self initUI];
+}
+
+- (void)initUI
+{
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kRealValue(20), kRealValue(78), kRealValue(100), kRealValue(23))];
+    titleLabel.textColor = kBlackColor;
+    titleLabel.font = boldFont(23);
+    titleLabel.text = @"填写申请";
+    [self.view addSubview:titleLabel];
+    
+    UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(kRealValue(20), titleLabel.bottom, kRealValue(100), kRealValue(23))];
+    tipLabel.textColor = kRedColor;
+    tipLabel.text = @"注：为了便于审核，需要您如实填写";
+    tipLabel.font = font(18);
+    [self.view addSubview:tipLabel];
+    
+    
+
+    
 }
 
 /*

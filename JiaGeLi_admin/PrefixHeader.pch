@@ -122,3 +122,4 @@ attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
 #import "NSMutableDictionary+Extension.h"
 #import "JGLCacheSingleton.h"
 #import "UIView+Extension.h"
+#import "YYKit.h"

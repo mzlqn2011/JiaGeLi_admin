@@ -35,31 +35,15 @@
     
     CGFloat btnHeight = kRealValue(50);
     UIButton *saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    saveBtn.frame = CGRectMake(0, kScreenHeight - btnHeight, kScreenWidth/2, btnHeight);
+    saveBtn.frame = CGRectMake(0, kScreenHeight - btnHeight, kScreenWidth, btnHeight);
     saveBtn.backgroundColor = UIColorFromRGB(0x99cc33);
     [saveBtn setTitle:@"保存发布" forState:kStateNormal];
     [saveBtn setTitleColor:kWhiteColor forState:kStateNormal];
     [self.view addSubview:saveBtn];
-    
-    UIButton *continueBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    continueBtn.frame = CGRectMake(saveBtn.jk_right, saveBtn.jk_top, saveBtn.jk_width, btnHeight);
-    continueBtn.backgroundColor = UIColorFromRGB(0x989933);
-    [continueBtn setTitle:@"继续发布" forState:kStateNormal];
-    [continueBtn setTitleColor:kWhiteColor forState:kStateNormal];
-    continueBtn.titleLabel.textColor = kWhiteColor;
-    [self.view addSubview:continueBtn];
-    
     [saveBtn addTarget:self action:@selector(saveBtnClick) forControlEvents:kControlEventTouchUpInside];
-    [continueBtn addTarget:self action:@selector(continueBtnClick) forControlEvents:kControlEventTouchUpInside];
-    
 }
 
 - (void)saveBtnClick
-{
-    
-}
-
-- (void)continueBtnClick
 {
     
 }

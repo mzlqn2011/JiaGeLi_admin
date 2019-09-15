@@ -171,6 +171,7 @@ PODS:
   - JKCategories/UIKit/UIWebView (1.8.1):
     - JKCategories/UIKit/UIColor
   - JKCategories/UIKit/UIWindow (1.8.1)
+  - JWAddressPickerView (0.0.4)
   - Masonry (1.1.0)
   - MJExtension (3.1.0)
   - MJRefresh (3.2.0)
@@ -191,6 +192,7 @@ DEPENDENCIES:
   - ASIHTTPRequest
   - IQKeyboardManager (~> 4.0.0)
   - JKCategories
+  - JWAddressPickerView
   - Masonry
   - MJExtension
   - MJRefresh
@@ -206,6 +208,7 @@ SPEC REPOS:
     - ASIHTTPRequest
     - IQKeyboardManager
     - JKCategories
+    - JWAddressPickerView
     - Masonry
     - MJExtension
     - MJRefresh
@@ -221,6 +224,7 @@ SPEC CHECKSUMS:
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
   IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
   JKCategories: d5fecfa4f790685ea20daea319f74a8701d4c3ab
+  JWAddressPickerView: 5e6a4ab2ca6b994214e0f114152e181d02fe0b88
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
@@ -231,6 +235,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 7c5f0524e94ec3b06ee4bd31838d0912afb82231
+PODFILE CHECKSUM: 8aa372aa56877145193c81c8acc872094bbc441a
 
 COCOAPODS: 1.7.5

@@ -28,4 +28,5 @@ pod 'SDWebImage'
 pod 'SDCycleScrollView'
 pod 'ReactiveObjC'
 pod 'YYKit'
+pod 'JWAddressPickerView'
 end
