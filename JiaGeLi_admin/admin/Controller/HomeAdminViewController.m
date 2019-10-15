@@ -37,19 +37,19 @@
     [self setcontentView];
     [self requestIncomeData];
 }
-- (void)initData{
-    
+
+- (void)initData
+{
     titles = @[@"发布商品",@"商品管理",@"订单管理",@"评论管理",@"房屋中介"];
 
     imageNames = @[@"l_product_add",@"l_product_manage",@"l_order",@"l_comment",@"l_house"];
 
     controllerNames = @[@"DistributeGoodsVC",@"GoodsManageVC",@"OrderManageVC",@"CommentListViewController",@"EditHouseViewController"];
-
     
 }
--(void)setcontentView{
 
-    
+-(void)setcontentView
+{
     [self.view addSubview:self.collectionView];
     
     [self.collectionView registerClass:[YLWorkCollectionViewCell class] forCellWithReuseIdentifier:@"YLWorkCollectionViewCell"];
@@ -103,7 +103,7 @@
 {
     
     HomeAdminHeardView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HomeAdminHeardView" forIndexPath:indexPath];
-     NSString * imgs = [NSString stringWithFormat:@"%@%@",ImgRootUrl,JGLSingle.userModel.logo];
+    NSString * imgs = [NSString stringWithFormat:@"%@%@",ImgRootUrl,JGLSingle.userModel.logo];
     [headerView.icon sd_setImageWithURL:[NSURL URLWithString:imgs] placeholderImage:[UIImage imageNamed:@"defult"]];
     [headerView.tixianButton jk_addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
         TiXianViewController * vc = [[TiXianViewController alloc]init];

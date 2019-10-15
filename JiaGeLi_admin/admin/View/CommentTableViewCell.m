@@ -22,7 +22,8 @@
     // Configure the view for the selected state
 }
 -(void)setModel:(CommentModel *)model{
-    NSString * imgs = [NSString stringWithFormat:@"%@%@",ImgRootUrl,model.thumb_src];    [self.icon sd_setImageWithURL:[NSURL URLWithString:imgs] placeholderImage:[UIImage imageNamed:@"defult"]];
+    NSString * imgs = [NSString stringWithFormat:@"%@%@",ImgRootUrl,model.thumb_src];
+    [self.icon sd_setImageWithURL:[NSURL URLWithString:imgs] placeholderImage:[UIImage imageNamed:@"defult"]];
     self.name.text =model.username;
     self.level.text =[NSString stringWithFormat:@"给了%ld星评价",[model.starts integerValue]];;//评星
     self.comment.text =model.content;
