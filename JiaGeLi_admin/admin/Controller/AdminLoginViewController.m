@@ -94,10 +94,7 @@
 
 #pragma mark - 登录/注册按钮
 - (IBAction)loginBtnClick:(UIButton *)sender {
-#if DEBUG
-    self.phoneTextField.text = @"18316447658";
-    self.codeTextField.text = @"123456";
-#endif
+
     if (self.phoneTextField.text.length == 0) {
         [SVProgressHUD displayInfoWithStatus:@"请输入电话号码"];
         return;
@@ -189,7 +186,7 @@
  @param failure 失败
  */
 - (void)requestCheckPhone {
-    [[DataRequestManager sharedManager]requestCheckPhone:@{@"tel":self.phoneTextField.text} success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+    [[DataRequestManager sharedManager]requestCheckPhone:@{@"tel":self.registerPhoneTextField.text} success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (NetWork_Success) {
             //说明格式正确,可以进行接收验证码的操作
             [self requestGetVerificationCode];
@@ -211,7 +208,7 @@
             });
             
         }else{
-            [SVProgressHUD displayErrorWithStatus:NetWork_Msg];
+            [SVProgressHUD displayErrorWithStatus:jsonDic[NetWork_Msg]];
         }
     } failure:^(NSError * _Nonnull error) {
         
@@ -276,7 +273,7 @@
             });
             
         }else{
-            [SVProgressHUD displayErrorWithStatus:NetWork_Msg];
+            [SVProgressHUD displayErrorWithStatus:jsonDic[NetWork_Msg]];
         }
         
     } failure:^(NSError * _Nonnull error) {

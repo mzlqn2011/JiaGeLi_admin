@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define NetMsg_Eexist TR_isEexist(jsonDic[NetWork_Msg])
 #define NetWork_Data @"data"
 #define NetWork_Msg @"msg"
-#define MsgCode @"MsgCode"
+#define SellerMsgCode @"SellerMsgCode"
 
 @interface DataRequestManager : NSObject
 

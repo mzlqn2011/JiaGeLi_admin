@@ -65,7 +65,7 @@
     [[DataRequestManager sharedManager] requestGetCode:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (TR_isEexist(jsonDic[NetWork_Data])) {
             [SVProgressHUD displayErrorWithStatus:@"短信已发送"];
-            [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%@", jsonDic[NetWork_Data][@"verificationCode"]  ]forKey:MsgCode];
+            [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%@", jsonDic[NetWork_Data][@"verificationCode"]  ]forKey:SellerMsgCode];
         } else {
             [SVProgressHUD displayErrorWithStatus:jsonDic[NetWork_Msg]];
         }
@@ -82,7 +82,7 @@
     [[DataRequestManager sharedManager] requestSendChangeGetCode:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (NetWork_Success) {
             [SVProgressHUD displayErrorWithStatus:@"短信已发送"];
-            [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%@", jsonDic[NetWork_Data][@"verificationCode"]  ] forKey:MsgCode];
+            [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%@", jsonDic[NetWork_Data][@"verificationCode"]  ] forKey:SellerMsgCode];
         } else if(NetMsg_Eexist) {
             [SVProgressHUD displayErrorWithStatus:jsonDic[NetWork_Msg]];
         }
@@ -92,7 +92,7 @@
 }
 
 +(BOOL)checkCode:(NSString *)code {
-    NSString *mCode =  [[NSUserDefaults standardUserDefaults] objectForKey:MsgCode];
+    NSString *mCode =  [[NSUserDefaults standardUserDefaults] objectForKey:SellerMsgCode];
     if (!TR_isEexist(code)) {
         [SVProgressHUD displayErrorWithStatus:@"验证码不能为空"];
         return NO;
