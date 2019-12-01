@@ -6,9 +6,9 @@
 //  Copyright © 2019 apple. All rights reserved.
 //
 
-#import "DataRequestManager.h"
+#import "AdminDataRequestManager.h"
 
-@implementation DataRequestManager
+@implementation AdminDataRequestManager
 
 + (instancetype)sharedManager
 {
@@ -181,7 +181,7 @@
 - (void)requestCheckPhone:(NSDictionary *)pramas
 success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
                   failure:(void (^)(NSError *error))failure{
-    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kUserUrl, @"telCheck"];;
+    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"telCheck"];;
     [self GETRequestWithUrl:urlStr parameters:pramas success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         success(jsonDic,statusCode);
     } failed:^(NSError * _Nonnull error) {
@@ -198,7 +198,7 @@ success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
                     success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
                     failure:(void (^)(NSError *error))failure {
     
-    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kUserUrl, @"login"];;
+    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"login"];;
     [self POST2RequestWithUrl:urlStr parameters:pramas success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         success(jsonDic,statusCode);
     } failed:^(NSError * _Nonnull error) {
@@ -216,7 +216,7 @@ success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
 - (void)requestGetCode:(NSDictionary *)pramas
                success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
                failure:(void (^)(NSError *error))failure{
-    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kUserUrl, @"sendRegCode"];;
+    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"sendRegCode"];;
     [self GETRequestWithUrl:urlStr parameters:pramas success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         success(jsonDic,statusCode);
     } failed:^(NSError * _Nonnull error) {
@@ -233,7 +233,7 @@ success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
 - (void)requestSendChangeGetCode:(NSDictionary *)pramas
                success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
                failure:(void (^)(NSError *error))failure{
-    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kUserUrl, @"sendfindPassCode"];;
+    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"sendfindPassCode"];;
     [self GETRequestWithUrl:urlStr parameters:pramas success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         success(jsonDic,statusCode);
     } failed:^(NSError * _Nonnull error) {
@@ -250,7 +250,7 @@ success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
 - (void)regist:(NSDictionary *)pramas
        success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
        failure:(void (^)(NSError *error))failure{
-    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kUserUrl, @"regist"];;
+    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"regist"];;
     [self POST2RequestWithUrl:urlStr parameters:pramas success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         success(jsonDic,statusCode);
     } failed:^(NSError * _Nonnull error) {
@@ -268,7 +268,7 @@ success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
 - (void)requestFindPassword:(NSDictionary *)pramas
                     success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
                     failure:(void (^)(NSError *error))failure{
-    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kUserUrl, @"findPassword"];;
+    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"findPassword"];;
     [self POST2RequestWithUrl:urlStr parameters:pramas success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         success(jsonDic,statusCode);
     } failed:^(NSError * _Nonnull error) {
@@ -285,7 +285,7 @@ success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
 - (void)requestChangePassword:(NSDictionary *)pramas
                     success:(void (^)(id  _Nonnull jsonDic, NSInteger statusCode))success
                     failure:(void (^)(NSError *error))failure{
-    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kUserUrl, @"changePassword"];;
+    NSString *urlStr = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"changePassword"];;
     [self POST2RequestWithUrl:urlStr parameters:pramas success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         success(jsonDic,statusCode);
     } failed:^(NSError * _Nonnull error) {

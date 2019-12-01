@@ -94,6 +94,11 @@
 
 #pragma mark - 登录/注册按钮
 - (IBAction)loginBtnClick:(UIButton *)sender {
+    
+    #if DEBUG
+        self.phoneTextField.text = @"15073536878";
+        self.codeTextField.text  = @"123456";
+    #endif
 
     if (self.phoneTextField.text.length == 0) {
         [SVProgressHUD displayInfoWithStatus:@"请输入电话号码"];
@@ -186,7 +191,7 @@
  @param failure 失败
  */
 - (void)requestCheckPhone {
-    [[DataRequestManager sharedManager]requestCheckPhone:@{@"tel":self.registerPhoneTextField.text} success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+    [[AdminDataRequestManager sharedManager]requestCheckPhone:@{@"tel":self.registerPhoneTextField.text} success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (NetWork_Success) {
             //说明格式正确,可以进行接收验证码的操作
             [self requestGetVerificationCode];
@@ -233,7 +238,7 @@
     NSMutableDictionary * param = [NSMutableDictionary dictionary];
     [param trmSetObject:self.phoneTextField.text forKey:@"tel"];
     [param trmSetObject:self.codeTextField.text forKey:@"password"];
-    [[DataRequestManager sharedManager] login:param success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+    [[AdminDataRequestManager sharedManager] login:param success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (NetWork_Success) {
             LoginModel *loginModel = [LoginModel mj_objectWithKeyValues:jsonDic[NetWork_Data]];
             [JGLSingle login:loginModel];
@@ -263,7 +268,7 @@
     [param trmSetObject:self.registerPhoneTextField.text forKey:@"tel"];
     [param trmSetObject:self.registerCodeTextField.text forKey:@"code"];
     [param trmSetObject:self.registerSurePwdTextField.text forKey:@"password"];
-    [[DataRequestManager sharedManager] regist:param success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+    [[AdminDataRequestManager sharedManager] regist:param success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (NetWork_Success) {
             [SVProgressHUD showSuccessWithStatus:@"注册成功"];
             dispatch_async(dispatch_get_main_queue(), ^{

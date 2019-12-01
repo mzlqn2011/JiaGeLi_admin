@@ -62,7 +62,7 @@
     [paramterDic setObject:phone forKey:@"tel"];
 
     
-    [[DataRequestManager sharedManager] requestGetCode:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+    [[AdminDataRequestManager sharedManager] requestGetCode:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (TR_isEexist(jsonDic[NetWork_Data])) {
             [SVProgressHUD displayErrorWithStatus:@"短信已发送"];
             [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%@", jsonDic[NetWork_Data][@"verificationCode"]  ]forKey:SellerMsgCode];
@@ -79,7 +79,7 @@
     [paramterDic setObject:phone forKey:@"tel"];
     
     
-    [[DataRequestManager sharedManager] requestSendChangeGetCode:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+    [[AdminDataRequestManager sharedManager] requestSendChangeGetCode:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (NetWork_Success) {
             [SVProgressHUD displayErrorWithStatus:@"短信已发送"];
             [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%@", jsonDic[NetWork_Data][@"verificationCode"]  ] forKey:SellerMsgCode];

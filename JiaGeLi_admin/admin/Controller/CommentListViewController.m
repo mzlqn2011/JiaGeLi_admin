@@ -130,7 +130,7 @@
 
 - (void)loadListData
 {
-    NSString *action = [NSString stringWithFormat:@"%s%@", kUserUrl, @"commentList"];
+    NSString *action = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"commentList"];
     NSDictionary *paramDic = @{@"seller_id":JGLSingle.userModel.seller_id,@"auth_token":JGLSingle.userModel.auth_token,@"page":@(self.pageModel.page),@"num":@(self.pageModel.rows)};
     
     [kDataRequestManager POST2RequestWithUrl:action parameters:paramDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {

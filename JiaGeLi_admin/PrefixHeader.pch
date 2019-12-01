@@ -85,7 +85,7 @@ attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
 
 #define kControlEventTouchUpInside  UIControlEventTouchUpInside
 
-#define kDataRequestManager [DataRequestManager sharedManager]
+#define kDataRequestManager [AdminDataRequestManager sharedManager]
 
 #define JGLSingle [JGLCacheSingleton shareInstance]
 #define TR_isEexist(param) [TRClassHelper isEexist:param]
@@ -116,7 +116,7 @@ attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
 #import "NSString+Extension.h"
 #import "JKUIKit.h"
 #import "JKFoundation.h"
-#import "DataRequestManager.h"
+#import "AdminDataRequestManager.h"
 #import "TRClassHelper.h"
 #import "MD5Encrypt.h"
 #import "NSMutableDictionary+Extension.h"

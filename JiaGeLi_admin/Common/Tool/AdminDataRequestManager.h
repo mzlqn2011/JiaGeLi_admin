@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define Domian  @"http://39.98.214.123"
 #define RootUrl @"http://39.98.214.123/jzapp/api/" //地址
 //#define kProductUrl "Product.php?action="
-#define kUserUrl    "Seller.php?action="
+#define kSellerUrl    "Seller.php?action="
 #define kServiceUrl    "Service.php?action="
 #define ImgRootUrl  @"http://39.98.214.123/jzapp/"   //图片根路径
 #define NetWork_Success [jsonDic[@"code"]integerValue] == 0
@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define NetWork_Msg @"msg"
 #define SellerMsgCode @"SellerMsgCode"
 
-@interface DataRequestManager : NSObject
+@interface AdminDataRequestManager : NSObject
 
 typedef void (^RequestSuccess) (id jsonDic, NSInteger statusCode);
 typedef void (^RequestFailed) (NSError *error);

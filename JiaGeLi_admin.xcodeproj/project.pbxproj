@@ -51,7 +51,7 @@
 		0935B75623043D6B0080315F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75023043D6B0080315F /* UIView+Extension.m */; };
 		0935B76023043DA00080315F /* MD5Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75823043DA00080315F /* MD5Encrypt.m */; };
 		0935B76123043DA00080315F /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75923043DA00080315F /* Common.m */; };
-		0935B76223043DA00080315F /* DataRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75A23043DA00080315F /* DataRequestManager.m */; };
+		0935B76223043DA00080315F /* AdminDataRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75A23043DA00080315F /* AdminDataRequestManager.m */; };
 		0935B76323043DA00080315F /* TRClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935B75F23043DA00080315F /* TRClassHelper.m */; };
 		096A6D622304ECE700A48D5B /* EditTFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 096A6D602304ECE700A48D5B /* EditTFView.m */; };
 		096A6D632304ECE700A48D5B /* EditTFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096A6D612304ECE700A48D5B /* EditTFView.xib */; };
@@ -201,11 +201,11 @@
 		0935B75123043D6B0080315F /* NSMutableDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Extension.h"; sourceTree = "<group>"; };
 		0935B75823043DA00080315F /* MD5Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Encrypt.m; sourceTree = "<group>"; };
 		0935B75923043DA00080315F /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
-		0935B75A23043DA00080315F /* DataRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequestManager.m; sourceTree = "<group>"; };
+		0935B75A23043DA00080315F /* AdminDataRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminDataRequestManager.m; sourceTree = "<group>"; };
 		0935B75B23043DA00080315F /* TRClassHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRClassHelper.h; sourceTree = "<group>"; };
 		0935B75C23043DA00080315F /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		0935B75D23043DA00080315F /* MD5Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Encrypt.h; sourceTree = "<group>"; };
-		0935B75E23043DA00080315F /* DataRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestManager.h; sourceTree = "<group>"; };
+		0935B75E23043DA00080315F /* AdminDataRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminDataRequestManager.h; sourceTree = "<group>"; };
 		0935B75F23043DA00080315F /* TRClassHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRClassHelper.m; sourceTree = "<group>"; };
 		096A6D5F2304ECE400A48D5B /* EditTFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTFView.h; sourceTree = "<group>"; };
 		096A6D602304ECE700A48D5B /* EditTFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTFView.m; sourceTree = "<group>"; };
@@ -553,8 +553,8 @@
 			children = (
 				0935B75C23043DA00080315F /* Common.h */,
 				0935B75923043DA00080315F /* Common.m */,
-				0935B75E23043DA00080315F /* DataRequestManager.h */,
-				0935B75A23043DA00080315F /* DataRequestManager.m */,
+				0935B75E23043DA00080315F /* AdminDataRequestManager.h */,
+				0935B75A23043DA00080315F /* AdminDataRequestManager.m */,
 				0935B75D23043DA00080315F /* MD5Encrypt.h */,
 				0935B75823043DA00080315F /* MD5Encrypt.m */,
 				0935B75B23043DA00080315F /* TRClassHelper.h */,
@@ -972,7 +972,7 @@
 				FA251DFB230960E900A9926C /* TZImageCropManager.m in Sources */,
 				04CA0B12230273BB0054C6C8 /* AppDelegate.m in Sources */,
 				FA251E1A230960E900A9926C /* UIView+SDAutoLayout.m in Sources */,
-				0935B76223043DA00080315F /* DataRequestManager.m in Sources */,
+				0935B76223043DA00080315F /* AdminDataRequestManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

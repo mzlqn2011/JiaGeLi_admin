@@ -177,7 +177,7 @@
 
 - (void)requestIncomeData
 {
-    NSString *action = [NSString stringWithFormat:@"%s%@", kUserUrl, @"income"];
+    NSString *action = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"income"];
     NSDictionary *paramDic = @{@"seller_id":JGLSingle.userModel.seller_id,@"auth_token":JGLSingle.userModel.auth_token};
     
     [kDataRequestManager POST2RequestWithUrl:action parameters:paramDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {

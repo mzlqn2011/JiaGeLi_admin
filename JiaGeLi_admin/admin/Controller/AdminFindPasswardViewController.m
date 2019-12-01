@@ -74,7 +74,7 @@
  @param failure 失败
  */
 - (void)requestCheckPhone {
-    [[DataRequestManager sharedManager]requestCheckPhone:@{@"tel":self.phoneTextField.text} success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+    [[AdminDataRequestManager sharedManager]requestCheckPhone:@{@"tel":self.phoneTextField.text} success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (statusCode == 100) {
             //说明格式正确,可以进行接收验证码的操作
             [self requestGetVerificationCode];
@@ -112,7 +112,7 @@
     //    NSString *md5Psw = [NSString md5:self.phoneTextField.text];
     //    [paramterDic setObject:md5Psw forKey:@"password"];
     [paramterDic setObject:self.codeTextField.text forKey:@"code"];
-    [[DataRequestManager sharedManager]requestFindPassword:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+    [[AdminDataRequestManager sharedManager]requestFindPassword:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (NetWork_Success) {
             [self requestModifyPassword];
             
@@ -130,7 +130,7 @@
     //    [paramterDic setObject:md5Psw forKey:@"password"];
     [paramterDic setObject:self.surePwdTextField.text forKey:@"password"];
     
-    [[DataRequestManager sharedManager]requestChangePassword:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
+    [[AdminDataRequestManager sharedManager]requestChangePassword:paramterDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
         if (NetWork_Success) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (self.findPasswardSuccess) {

@@ -40,7 +40,7 @@
 }
 
 - (void)questApply{
-    NSString *action = [NSString stringWithFormat:@"%s%@", kUserUrl, @"withdrawApply"];
+    NSString *action = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"withdrawApply"];
     NSDictionary *paramDic = @{@"seller_id":JGLSingle.userModel.seller_id,@"auth_token":JGLSingle.userModel.auth_token,@"account":self.alipayAccountTF.text,@"amount":self.amountTF.text,@"name":self.nameTF.text};
     
     [kDataRequestManager POST2RequestWithUrl:action parameters:paramDic success:^(id  _Nonnull jsonDic, NSInteger statusCode) {
