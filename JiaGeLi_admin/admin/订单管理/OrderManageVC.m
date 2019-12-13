@@ -26,8 +26,8 @@
 //    NSString *authToken = @"90c58ac60dccbf4b1810d947e1407488";//12ca7be7d4646d538415e602c6b1b594Ø
     NSString *url = [NSString stringWithFormat:@"%s%@", kSellerUrl, @"orderList"];
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionary];
-    [paramDic setObject:JGLSingle.userModel.seller_id forKey:@"seller_id"]; //JGLSingle.userModel.seller_id
-    [paramDic setObject:JGLSingle.userModel.auth_token forKey:@"auth_token"];
+    [paramDic setObject:JGLAdminSingle.userModel.seller_id forKey:@"seller_id"]; //JGLSingle.userModel.seller_id
+    [paramDic setObject:JGLAdminSingle.userModel.auth_token forKey:@"auth_token"];
     [paramDic setObject:@(100) forKey:@"status"];
     [paramDic setObject:@(0) forKey:@"page"];
     [paramDic setObject:@(10) forKey:@"num"];
